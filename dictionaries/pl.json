@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Logopeda Czerwionka-Leszczyny – Gabinet Logopedyczny Kinga Krajs",
-    "description": "Terapia logopedyczna dzieci i dorosłych: zaburzenia mowy, autyzm, zespół Aspergera, zaburzenia połykania. Biernota 11, Czerwionka."
+    "title": "Logopeda Czerwionka-Leszczyny | Gabinet Kinga Krajs",
+    "description": "Terapia mowy i połykania, autyzm, zespół Aspergera – dzieci i dorośli. Biernota 11, Czerwionka. Wt. i czw. 7:30–19:00. Tel. 518 542 193."
   },
   "home": {
     "title": "Gabinet Logopedyczny Kinga Krajs",
@@ -191,9 +191,103 @@
     "medfile": "Profil gabinetu na Medfile",
     "newTab": "(otwiera się w nowej karcie)",
     "rights": "Wszelkie prawa zastrzeżone.",
+    "credit": "Created by",
     "privacy": "Polityka prywatności",
     "cookies": "Polityka cookies",
     "backToTop": "Wróć na górę strony",
     "languages": "Język strony"
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog logopedyczny | Kinga Krajs, Czerwionka",
+      "description": "Artykuły logopedy z Czerwionki: pierwsza wizyta, terapia mowy i połykania, autyzm i zespół Aspergera. Praktyczne informacje dla rodziców."
+    },
+    "title": "Blog",
+    "lead": "Artykuły o pracy logopedy, terapii i przygotowaniu do wizyty.",
+    "breadcrumb": "Ścieżka strony",
+    "filterLabel": "Kategorie wpisów",
+    "all": "Wszystkie",
+    "searchLabel": "Szukaj we wpisach",
+    "searchPlaceholder": "Szukaj po tytule…",
+    "clearSearch": "Wyczyść wyszukiwanie",
+    "results": "Liczba wpisów: {n}",
+    "emptyTitle": "Brak wpisów dla tych kryteriów",
+    "emptyText": "Zmień frazę lub wybierz inną kategorię.",
+    "clearFilters": "Wyczyść filtry",
+    "soon": "Kolejne artykuły pojawią się wkrótce.",
+    "more": "Pokaż więcej",
+    "readMin": "{n} min czytania",
+    "read": "Czytaj wpis",
+    "by": "Autor",
+    "published": "Opublikowano",
+    "toc": "Spis treści",
+    "copyLink": "Kopiuj link",
+    "copied": "Skopiowano",
+    "backToList": "Wszystkie wpisy",
+    "related": "Czytaj także",
+    "authorName": "Kinga Krajs",
+    "authorRole": "Pedagog i logopeda",
+    "authorBio": "Ukończyła studia magisterskie z edukacji wczesnoszkolnej i wychowania przedszkolnego oraz studia podyplomowe z logopedii. Aktualnie poszerza wiedzę na studiach podyplomowych z zakresu autyzmu.",
+    "ctaTitle": "Masz pytania? Umów konsultację",
+    "ctaText": "Konsultacja logopedyczna z planem terapii i zaleceniami trwa 60 minut i kosztuje 150 zł.",
+    "ctaButton": "Umów wizytę na Medfile",
+    "ctaPhone": "Zadzwoń: 518 542 193",
+    "newTab": "(otwiera się w nowej karcie)",
+    "categories": {
+      "parents": "Dla rodziców",
+      "autism": "Autyzm",
+      "swallowing": "Połykanie",
+      "speech": "Mowa"
+    }
+  },
+  "services": {
+    "title": "Usługi",
+    "lead": "Terapia logopedyczna dzieci i dorosłych w pięciu obszarach. Zaczynamy od konsultacji, potem ustalamy plan terapii.",
+    "areasLabel": "Obszary pracy",
+    "areas": [
+      {
+        "title": "Zaburzenia mowy",
+        "text": "Konsultacja i terapia zaburzeń mowy u dzieci i dorosłych."
+      },
+      {
+        "title": "Ćwiczenia mowy",
+        "text": "Ćwiczenia w ramach planu terapii."
+      },
+      {
+        "title": "Zaburzenia połykania",
+        "text": "Konsultacja i terapia zaburzeń połykania."
+      },
+      {
+        "title": "Autyzm",
+        "text": "Terapia logopedyczna w autyzmie."
+      },
+      {
+        "title": "Zespół Aspergera",
+        "text": "Terapia logopedyczna w zespole Aspergera."
+      }
+    ],
+    "processTitle": "Jak wygląda współpraca",
+    "steps": [
+      {
+        "title": "Konsultacja",
+        "text": "Pierwsza wizyta (60 min): konsultacja, plan terapii i zalecenia dla rodzica."
+      },
+      {
+        "title": "Terapia",
+        "text": "Kolejne wizyty trwają 30 lub 45 minut."
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Opinie",
+    "ratingLabel": "{r} na 5",
+    "based": "Na podstawie {n} opinii w Google",
+    "viewAll": "Zobacz opinie w Google",
+    "writeReview": "Dodaj opinię",
+    "sourceNote": "Opinie pochodzą z profilu Google; treść w oryginale.",
+    "regionLabel": "Opinie pacjentów z Google",
+    "pause": "Wstrzymaj przewijanie opinii",
+    "newTab": "(otwiera się w nowej karcie)",
+    "countLabel": "opinii w Google"
   }
 }

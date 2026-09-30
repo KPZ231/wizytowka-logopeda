@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { Locale } from "@/i18n/config";
 import { dayNames } from "./contact-section";
@@ -11,6 +12,7 @@ const PHONE_DISPLAY = "+48 518 542 193";
 const PHONE_HREF = "tel:+48518542193";
 const MEDFILE_URL = "https://www.medfile.pl/kinga-krajs/logopeda/polska/";
 const OPEN_DAYS = [1, 3] as const;
+const CREDIT_URL = "https://www.kpzsproductions.pl";
 
 // Kotwice na stronie głównej (z prefiksem języka, działają też z podstron); blog to przyszła osobna podstrona (teraz 404).
 const links = [
@@ -36,6 +38,13 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       <div className="page-w pt-14 md:pt-20">
         <Stagger className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-10">
           <Item>
+            <Image
+              src="/logo_round.png"
+              alt=""
+              width={80}
+              height={80}
+              className="mb-4 size-20"
+            />
             <p className="text-xl font-bold">{NAME}</p>
             <p className="mt-3 max-w-[32ch] text-violet-200">
               {footer.tagline}
@@ -106,9 +115,23 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
         </div>
 
         <div className="flex flex-col gap-4 border-t border-violet-800 py-6 text-sm text-violet-200 md:flex-row md:items-center md:justify-between">
-          <p>
-            © {new Date().getFullYear()} {NAME}. {footer.rights}
-          </p>
+          <div>
+            <p>
+              © {new Date().getFullYear()} {NAME}. {footer.rights}
+            </p>
+            <p>
+              {footer.credit}{" "}
+              <a
+                href={CREDIT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${link} font-semibold text-on-strong`}
+              >
+                KPZsProductions
+                <span className="sr-only">{footer.newTab}</span>
+              </a>
+            </p>
+          </div>
           <ul className="flex flex-wrap gap-x-6">
             <li>
               <a href={`/${lang}/polityka-prywatnosci`} className={link}>

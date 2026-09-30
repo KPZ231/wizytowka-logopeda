@@ -182,6 +182,35 @@ body {
     radial-gradient(45% 40% at 90% 30%, var(--violet-200) 0%, transparent 70%);
 }
 
+/* Opinie: tor z dwiema identycznymi połówkami, przesuwany o -50% (tylko transform) */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@utility marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--marquee-duration, 60s) linear infinite;
+  animation-direction: var(--marquee-dir, normal);
+  will-change: transform;
+}
+/* Pauza: przycisk (data-paused), fokus klawiaturą i hover myszą — te dwa ostatnie tylko na regionie z opiniami, bez przycisku pauzy */
+.marquee-root[data-paused="true"] .marquee-track,
+.marquee-region:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+@media (hover: hover) and (pointer: fine) {
+  .marquee-region:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

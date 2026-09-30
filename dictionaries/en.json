@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Speech therapist Czerwionka-Leszczyny – Kinga Krajs Speech Therapy",
-    "description": "Speech and language therapy for children and adults: speech disorders, autism, Asperger syndrome, swallowing disorders. Biernota 11, Czerwionka, Poland."
+    "title": "Speech Therapist Czerwionka | Kinga Krajs Practice",
+    "description": "Speech and swallowing therapy, autism, Asperger syndrome – children and adults. Biernota 11, Czerwionka. Tue & Thu 7:30–19:00. Tel. +48 518 542 193."
   },
   "home": {
     "title": "Kinga Krajs Speech Therapy Practice",
@@ -191,9 +191,103 @@
     "medfile": "Practice profile on Medfile",
     "newTab": "(opens in a new tab)",
     "rights": "All rights reserved.",
+    "credit": "Created by",
     "privacy": "Privacy policy",
     "cookies": "Cookie policy",
     "backToTop": "Back to top",
     "languages": "Site language"
+  },
+  "blog": {
+    "meta": {
+      "title": "Speech therapy blog | Kinga Krajs, Czerwionka",
+      "description": "Articles by a speech therapist from Czerwionka: the first visit, speech and swallowing therapy, autism and Asperger syndrome. Practical information for parents."
+    },
+    "title": "Blog",
+    "lead": "Articles about a speech therapist's work, therapy and preparing for a visit.",
+    "breadcrumb": "Breadcrumb",
+    "filterLabel": "Post categories",
+    "all": "All",
+    "searchLabel": "Search posts",
+    "searchPlaceholder": "Search by title…",
+    "clearSearch": "Clear search",
+    "results": "Number of posts: {n}",
+    "emptyTitle": "No posts match these criteria",
+    "emptyText": "Change the phrase or choose another category.",
+    "clearFilters": "Clear filters",
+    "soon": "More articles are coming soon.",
+    "more": "Show more",
+    "readMin": "{n} min read",
+    "read": "Read post",
+    "by": "Author",
+    "published": "Published",
+    "toc": "Table of contents",
+    "copyLink": "Copy link",
+    "copied": "Copied",
+    "backToList": "All posts",
+    "related": "Keep reading",
+    "authorName": "Kinga Krajs",
+    "authorRole": "Educator and speech therapist",
+    "authorBio": "She completed a master's degree in early childhood and preschool education and postgraduate studies in speech therapy. She is currently expanding her knowledge through postgraduate studies in autism.",
+    "ctaTitle": "Have questions? Book a consultation",
+    "ctaText": "A speech therapy consultation with a therapy plan and recommendations lasts 60 minutes and costs PLN 150.",
+    "ctaButton": "Book a visit on Medfile",
+    "ctaPhone": "Call: 518 542 193",
+    "newTab": "(opens in a new tab)",
+    "categories": {
+      "parents": "For parents",
+      "autism": "Autism",
+      "swallowing": "Swallowing",
+      "speech": "Speech"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "lead": "Speech and language therapy for children and adults in five areas. We start with a consultation, then agree on a therapy plan.",
+    "areasLabel": "Areas of work",
+    "areas": [
+      {
+        "title": "Speech disorders",
+        "text": "Consultation and therapy of speech disorders in children and adults."
+      },
+      {
+        "title": "Speech exercises",
+        "text": "Exercises as part of the therapy plan."
+      },
+      {
+        "title": "Swallowing disorders",
+        "text": "Consultation and therapy of swallowing disorders."
+      },
+      {
+        "title": "Autism",
+        "text": "Speech and language therapy in autism."
+      },
+      {
+        "title": "Asperger syndrome",
+        "text": "Speech and language therapy in Asperger syndrome."
+      }
+    ],
+    "processTitle": "How we work together",
+    "steps": [
+      {
+        "title": "Consultation",
+        "text": "First visit (60 min): consultation, therapy plan and recommendations for the parent."
+      },
+      {
+        "title": "Therapy",
+        "text": "Follow-up visits last 30 or 45 minutes."
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Reviews",
+    "ratingLabel": "{r} out of 5",
+    "based": "Based on {n} reviews on Google",
+    "viewAll": "See reviews on Google",
+    "writeReview": "Write a review",
+    "sourceNote": "Reviews come from the Google profile; text shown in the original language.",
+    "regionLabel": "Patient reviews from Google",
+    "pause": "Pause scrolling reviews",
+    "newTab": "(opens in a new tab)",
+    "countLabel": "reviews on Google"
   }
 }

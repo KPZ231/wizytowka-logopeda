@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { locales, type Locale } from "@/i18n/config";
@@ -20,7 +21,7 @@ const links = [
 ] as const;
 
 const linkClass =
-  "pressable inline-flex min-h-11 items-center rounded-full px-4 text-sm font-semibold text-muted hover:text-accent hover:bg-accent-soft";
+  "pressable inline-flex min-h-11 items-center rounded-full px-4 text-sm font-semibold text-muted hover:text-accent hover:bg-accent-soft aria-[current=page]:bg-accent-soft aria-[current=page]:text-accent";
 
 /**
  * Pływający pasek: ukryty na górze strony (hero), wysuwa się po pierwszym scrollu i zostaje,
@@ -38,7 +39,9 @@ export function SiteNav({
   // Fokus z klawiatury wymusza pokazanie paska — inaczej Tab trafiałby w niewidoczny element.
   const [focused, setFocused] = useState(false);
   const pathname = usePathname();
-  const visible = scrolled || focused;
+  // Ukrywanie po scrollu dotyczy tylko strony głównej (hero); na podstronach (blog) pasek jest stale widoczny.
+  const onHome = pathname === `/${lang}`;
+  const visible = !onHome || scrolled || focused;
 
   useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > SHOW_AFTER));
 
@@ -76,12 +79,20 @@ export function SiteNav({
     >
       <nav
         aria-label={nav.label}
-        className="page-w flex items-center justify-between gap-2 rounded-full border border-border bg-background/80 py-1.5 pr-1.5 pl-5 shadow-md backdrop-blur-md"
+        className="page-w flex items-center justify-between gap-2 rounded-full border border-border bg-background/80 py-1.5 pr-1.5 pl-1.5 shadow-md backdrop-blur-md"
       >
         <a
           href={`/${lang}`}
-          className="pressable py-2 text-sm font-bold whitespace-nowrap text-foreground"
+          className="pressable flex min-h-11 items-center gap-3 rounded-full pr-2 text-sm font-bold whitespace-nowrap text-foreground"
         >
+          {/* alt="" — nazwę linku daje tekst obok */}
+          <Image
+            src="/logo_round.png"
+            alt=""
+            width={44}
+            height={44}
+            className="size-11 shrink-0"
+          />
           <span className="md:hidden">{nav.brandShort}</span>
           <span className="hidden md:inline">{nav.brand}</span>
         </a>
@@ -89,7 +100,15 @@ export function SiteNav({
         <ul className="hidden items-center lg:flex">
           {links.map(([key, path]) => (
             <li key={key}>
-              <a href={`/${lang}${path}`} className={linkClass}>
+              <a
+                href={`/${lang}${path}`}
+                aria-current={
+                  path === "/blog" && pathname.startsWith(`/${lang}/blog`)
+                    ? "page"
+                    : undefined
+                }
+                className={linkClass}
+              >
                 {nav[key]}
               </a>
             </li>
@@ -144,6 +163,11 @@ export function SiteNav({
                   <li key={key}>
                     <a
                       href={`/${lang}${path}`}
+                      aria-current={
+                        path === "/blog" && pathname.startsWith(`/${lang}/blog`)
+                          ? "page"
+                          : undefined
+                      }
                       className={`${linkClass} w-full`}
                     >
                       {nav[key]}

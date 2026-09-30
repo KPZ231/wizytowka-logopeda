@@ -6,5 +6,194 @@
   "home": {
     "title": "Kinga Krajs Speech Therapy Practice",
     "lead": "Therapy for speech and swallowing disorders, autism and Asperger syndrome in children and adults. Czerwionka, Tuesdays and Thursdays."
+  },
+  "nav": {
+    "brand": "Kinga Krajs Speech Therapy Practice",
+    "brandShort": "Kinga Krajs",
+    "label": "Main navigation",
+    "services": "Services",
+    "about": "About the practice",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "contact": "Contact",
+    "call": "Call",
+    "callLabel": "Call: 518 542 193",
+    "menu": "Menu",
+    "language": "Language"
+  },
+  "medfile": {
+    "title": "Book your visit through Medfile",
+    "lead": "You can find the practice profile on the Medfile platform. Check available dates there and book a visit online.",
+    "hours": "We see patients on Tuesdays and Thursdays, 7:30 am–7:00 pm.",
+    "cta": "Book a visit on Medfile",
+    "newTab": "(opens in a new tab)"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "items": [
+      {
+        "name": "Speech therapy consultation",
+        "description": "First visit: consultation, therapy plan and recommendations.",
+        "duration": "60 min",
+        "price": "150 PLN"
+      },
+      {
+        "name": "Speech therapy session",
+        "description": "Follow-up visit.",
+        "duration": "30 min",
+        "price": "80 PLN"
+      },
+      {
+        "name": "Speech therapy session",
+        "description": "Follow-up visit.",
+        "duration": "45 min",
+        "price": "120 PLN"
+      }
+    ]
+  },
+  "office": {
+    "title": "Take a look inside",
+    "photos": [
+      {
+        "caption": "The practice",
+        "alt": "The practice"
+      },
+      {
+        "caption": "Interior",
+        "alt": "Interior"
+      },
+      {
+        "caption": "Therapy space",
+        "alt": "Therapy space"
+      },
+      {
+        "caption": "Details",
+        "alt": "Details"
+      },
+      {
+        "caption": "Atmosphere",
+        "alt": "Atmosphere"
+      }
+    ],
+    "zoom": "Zoom in on photo",
+    "close": "Close",
+    "prev": "Previous photo",
+    "next": "Next photo"
+  },
+  "contact": {
+    "title": "Write or call us",
+    "lead": "Tell us briefly how we can help and we will get back to you. You can also simply call.",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "hours": {
+      "title": "Opening hours",
+      "today": "Today",
+      "openNow": "Open now, until 7:00 pm",
+      "closedNow": "Closed now",
+      "next": "Next appointments: {day}, 7:30 am"
+    },
+    "map": "View on map",
+    "form": {
+      "name": "Full name",
+      "phone": "Phone",
+      "email": "Email",
+      "contactHint": "Enter a phone number or an email so we can reply.",
+      "who": "Who is the visit for?",
+      "child": "Child",
+      "adult": "Adult",
+      "message": "Message",
+      "messageHint": "Please do not include diagnosis details or sensitive data.",
+      "consent": "I consent to the processing of my personal data for the purpose of replying to this message.",
+      "send": "Send message",
+      "sending": "Sending…",
+      "sentTitle": "Thank you for your message",
+      "sentText": "We will get back to you as soon as possible.",
+      "sendAnother": "Write another message",
+      "failed": "The message could not be sent. Please try again or call: 518 542 193.",
+      "errors": {
+        "name": "Enter your full name.",
+        "contact": "Enter a valid phone number or email.",
+        "message": "Write a message (at least 10 characters).",
+        "consent": "Consent is required to send the message."
+      }
+    },
+    "mapEmbed": {
+      "iframeTitle": "Google map: Kinga Krajs Speech Therapy Practice, Biernota 11, Czerwionka"
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "lead": "Short answers about the scope of work, prices and location.",
+    "more": "Did not find your answer? Write or call us.",
+    "moreLink": "Go to contact",
+    "items": [
+      {
+        "q": "What kind of help does speech therapist Kinga Krajs provide?",
+        "a": "Kinga Krajs is a speech and language therapist. Based on medical knowledge and experience, she provides: a speech therapy consultation (first visit) with a therapy plan and recommendations for the parent (60 min), and speech therapy sessions (follow-up visits, 30 or 45 min)."
+      },
+      {
+        "q": "How much does a visit cost?",
+        "a": "The speech therapy consultation (first visit) with a therapy plan and recommendations costs PLN 150 and lasts 60 minutes. A follow-up therapy visit costs PLN 80 (30 min) or PLN 120 (45 min)."
+      },
+      {
+        "q": "Where and when does she see patients?",
+        "a": "The practice is located at Biernota 11, 44-230 Czerwionka-Leszczyny, Poland. Appointments are held on Tuesdays and Thursdays, 7:30 am–7:00 pm."
+      },
+      {
+        "q": "In which languages does she provide consultations?",
+        "a": "Consultations are provided in Polish."
+      },
+      {
+        "q": "What areas does she specialise in?",
+        "a": "Kinga Krajs specialises in working with Asperger syndrome, swallowing disorders, speech disorders, speech exercises and autism."
+      },
+      {
+        "q": "What is her education?",
+        "a": "I am an educator and a speech therapist. I completed a master's degree in early childhood and preschool education, as well as postgraduate studies in speech therapy. I am currently expanding my knowledge through postgraduate studies in autism. I have completed numerous trainings and internships."
+      },
+      {
+        "q": "How do I book a visit?",
+        "a": "Call +48 518 542 193, write using the contact form on this page, or use the practice's profile on Medfile."
+      }
+    ]
+  },
+  "route": {
+    "title": "How to get here and where to park",
+    "lead": "The practice is at Biernota 11, 44-230 Czerwionka, Poland. Watch the video and follow the route step by step.",
+    "navigate": "Navigate to the practice",
+    "newTab": "(opens in a new tab)",
+    "videoLabel": "How-to video: getting here",
+    "videoSoon": "The video will be available soon",
+    "photoSoon": "Photo placeholder",
+    "stepsLabel": "Route step by step",
+    "steps": [
+      {
+        "title": "Getting here",
+        "text": "[TO BE COMPLETED] Describe how to reach the practice: which direction, which roads, landmarks.",
+        "alt": "Route to the practice"
+      },
+      {
+        "title": "Where to park",
+        "text": "[TO BE COMPLETED] Describe where to leave the car: parking spot, any restrictions.",
+        "alt": "Parking near the practice"
+      },
+      {
+        "title": "From the car park to the practice",
+        "text": "[TO BE COMPLETED] Describe the last stretch: which way to walk, how to recognise the entrance.",
+        "alt": "Entrance to the practice"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Speech and language therapy for children and adults.",
+    "navTitle": "Site",
+    "contactTitle": "Contact",
+    "medfile": "Practice profile on Medfile",
+    "newTab": "(opens in a new tab)",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "backToTop": "Back to top",
+    "languages": "Site language"
   }
 }

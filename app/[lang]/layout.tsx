@@ -4,6 +4,8 @@ import { Manrope } from "next/font/google";
 import { hasLocale, locales } from "@/i18n/config";
 import { getDictionary } from "./dictionaries";
 import { MotionProvider } from "./motion-provider";
+import { SiteFooter } from "../../components/site-footer";
+import { SiteNav } from "../../components/site-nav";
 import "../globals.css";
 
 // latin-ext: polskie diakrytyki; cyrillic: wersja ukraińska
@@ -25,7 +27,10 @@ export async function generateMetadata({
     description: meta.description,
     alternates: {
       canonical: `/${lang}`,
-      languages: { ...Object.fromEntries(locales.map((l) => [l, `/${l}`])), "x-default": "/pl" },
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+        "x-default": "/pl",
+      },
     },
   };
 }
@@ -36,13 +41,18 @@ export default async function RootLayout({
 }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const { nav } = dict;
 
   return (
-    <html
-      lang={lang}
-      className={`${manrope.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col"><MotionProvider>{children}</MotionProvider></body>
+    <html lang={lang} className={`${manrope.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col">
+        <MotionProvider>
+          <SiteNav lang={lang} nav={nav} />
+          {children}
+          <SiteFooter lang={lang} dict={dict} />
+        </MotionProvider>
+      </body>
     </html>
   );
 }

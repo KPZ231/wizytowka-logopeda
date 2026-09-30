@@ -6,5 +6,194 @@
   "home": {
     "title": "Gabinet Logopedyczny Kinga Krajs",
     "lead": "Terapia zaburzeń mowy, połykania, autyzmu i zespołu Aspergera u dzieci i dorosłych. Czerwionka, wtorki i czwartki."
+  },
+  "nav": {
+    "brand": "Gabinet Logopedyczny Kinga Krajs",
+    "brandShort": "Kinga Krajs",
+    "label": "Główna nawigacja",
+    "services": "Usługi",
+    "about": "O gabinecie",
+    "pricing": "Cennik",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "call": "Zadzwoń",
+    "callLabel": "Zadzwoń: 518 542 193",
+    "menu": "Menu",
+    "language": "Język"
+  },
+  "medfile": {
+    "title": "Umów wizytę przez Medfile",
+    "lead": "Profil gabinetu znajdziesz na platformie Medfile. Sprawdź tam dostępne terminy i umów wizytę online.",
+    "hours": "Przyjmujemy we wtorki i czwartki, 7:30–19:00.",
+    "cta": "Umów wizytę na Medfile",
+    "newTab": "(otwiera się w nowej karcie)"
+  },
+  "pricing": {
+    "title": "Cennik",
+    "items": [
+      {
+        "name": "Konsultacja logopedyczna",
+        "description": "Pierwsza wizyta: konsultacja, plan terapii i zalecenia.",
+        "duration": "60 min",
+        "price": "150 zł"
+      },
+      {
+        "name": "Terapia logopedyczna",
+        "description": "Kolejna wizyta.",
+        "duration": "30 min",
+        "price": "80 zł"
+      },
+      {
+        "name": "Terapia logopedyczna",
+        "description": "Kolejna wizyta.",
+        "duration": "45 min",
+        "price": "120 zł"
+      }
+    ]
+  },
+  "office": {
+    "title": "Zajrzyj do gabinetu",
+    "photos": [
+      {
+        "caption": "Gabinet",
+        "alt": "Gabinet"
+      },
+      {
+        "caption": "Wnętrze",
+        "alt": "Wnętrze"
+      },
+      {
+        "caption": "Miejsce terapii",
+        "alt": "Miejsce terapii"
+      },
+      {
+        "caption": "Detale",
+        "alt": "Detale"
+      },
+      {
+        "caption": "Atmosfera",
+        "alt": "Atmosfera"
+      }
+    ],
+    "zoom": "Przybliż zdjęcie",
+    "close": "Zamknij",
+    "prev": "Poprzednie zdjęcie",
+    "next": "Następne zdjęcie"
+  },
+  "contact": {
+    "title": "Napisz lub zadzwoń",
+    "lead": "Opisz krótko, w czym możemy pomóc, a skontaktujemy się z Tobą. Możesz też po prostu zadzwonić.",
+    "addressLabel": "Adres",
+    "phoneLabel": "Telefon",
+    "hours": {
+      "title": "Godziny przyjęć",
+      "today": "Dziś",
+      "openNow": "Teraz otwarte, do 19:00",
+      "closedNow": "Teraz zamknięte",
+      "next": "Najbliższe przyjęcia: {day}, 7:30"
+    },
+    "map": "Zobacz na mapie",
+    "form": {
+      "name": "Imię i nazwisko",
+      "phone": "Telefon",
+      "email": "E-mail",
+      "contactHint": "Podaj telefon lub e-mail, żebyśmy mogli odpowiedzieć.",
+      "who": "Dla kogo jest wizyta?",
+      "child": "Dziecko",
+      "adult": "Dorosły",
+      "message": "Wiadomość",
+      "messageHint": "Nie podawaj szczegółów diagnozy ani danych wrażliwych.",
+      "consent": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na wiadomość.",
+      "send": "Wyślij wiadomość",
+      "sending": "Wysyłanie…",
+      "sentTitle": "Dziękujemy za wiadomość",
+      "sentText": "Skontaktujemy się z Tobą najszybciej, jak to możliwe.",
+      "sendAnother": "Napisz kolejną wiadomość",
+      "failed": "Nie udało się wysłać wiadomości. Spróbuj ponownie lub zadzwoń: 518 542 193.",
+      "errors": {
+        "name": "Podaj imię i nazwisko.",
+        "contact": "Podaj poprawny telefon lub e-mail.",
+        "message": "Napisz wiadomość (min. 10 znaków).",
+        "consent": "Zgoda jest potrzebna, aby wysłać wiadomość."
+      }
+    },
+    "mapEmbed": {
+      "iframeTitle": "Mapa Google: Gabinet Logopedyczny Kinga Krajs, Biernota 11, Czerwionka"
+    }
+  },
+  "faq": {
+    "title": "Najczęstsze pytania",
+    "lead": "Krótkie odpowiedzi o zakresie pracy, cenach i dojeździe.",
+    "more": "Nie znalazłeś odpowiedzi? Napisz lub zadzwoń.",
+    "moreLink": "Przejdź do kontaktu",
+    "items": [
+      {
+        "q": "Jakiego rodzaju porad udziela logopeda Kinga Krajs?",
+        "a": "Kinga Krajs jest logopedą. Na podstawie wiedzy medycznej i doświadczenia świadczy usługi w zakresie: konsultacji logopedycznej (pierwsza wizyta) z planem terapii i zaleceniami dla rodzica (60 min) oraz terapii logopedycznej (kolejna wizyta, 30 lub 45 min)."
+      },
+      {
+        "q": "Ile kosztuje wizyta?",
+        "a": "Konsultacja logopedyczna (pierwsza wizyta) z planem terapii i zaleceniami kosztuje 150 zł i trwa 60 minut. Kolejna wizyta terapeutyczna kosztuje 80 zł (30 min) lub 120 zł (45 min)."
+      },
+      {
+        "q": "Gdzie i kiedy przyjmuje pacjentów?",
+        "a": "Gabinet mieści się pod adresem Biernota 11, 44-230 Czerwionka-Leszczyny. Przyjęcia odbywają się we wtorki i czwartki w godzinach 7:30–19:00."
+      },
+      {
+        "q": "W jakich językach udziela porad?",
+        "a": "Porad udziela w języku polskim."
+      },
+      {
+        "q": "W jakich obszarach się specjalizuje?",
+        "a": "Kinga Krajs specjalizuje się w pracy z zespołem Aspergera, zaburzeniami połykania, zaburzeniami mowy, ćwiczeniami mowy oraz autyzmem."
+      },
+      {
+        "q": "Jakie ma wykształcenie?",
+        "a": "Jestem pedagogiem i logopedą. Ukończyłam studia magisterskie na kierunku edukacja wczesnoszkolna oraz wychowanie przedszkolne, a także studia podyplomowe z zakresu logopedii. Aktualnie poszerzam wiedzę na studiach podyplomowych z zakresu autyzmu. Ukończyłam liczne szkolenia oraz praktyki."
+      },
+      {
+        "q": "Jak umówić wizytę?",
+        "a": "Zadzwoń pod numer +48 518 542 193, napisz przez formularz kontaktowy na tej stronie albo skorzystaj z profilu gabinetu na Medfile."
+      }
+    ]
+  },
+  "route": {
+    "title": "Jak dojechać i gdzie zaparkować",
+    "lead": "Gabinet znajduje się pod adresem Biernota 11, 44-230 Czerwionka. Obejrzyj film i przejdź trasę krok po kroku.",
+    "navigate": "Nawiguj do gabinetu",
+    "newTab": "(otwiera się w nowej karcie)",
+    "videoLabel": "Film instruktażowy: jak dojechać",
+    "videoSoon": "Film pojawi się wkrótce",
+    "photoSoon": "Miejsce na zdjęcie",
+    "stepsLabel": "Trasa krok po kroku",
+    "steps": [
+      {
+        "title": "Dojazd",
+        "text": "[UZUPEŁNIJ] Opisz, jak dojechać do gabinetu: z której strony, które drogi, punkty orientacyjne.",
+        "alt": "Dojazd do gabinetu"
+      },
+      {
+        "title": "Gdzie zaparkować",
+        "text": "[UZUPEŁNIJ] Opisz, gdzie zostawić samochód: miejsce parkingowe, ewentualne ograniczenia.",
+        "alt": "Miejsce parkingowe przy gabinecie"
+      },
+      {
+        "title": "Od parkingu do gabinetu",
+        "text": "[UZUPEŁNIJ] Opisz ostatni odcinek: którędy iść, jak rozpoznać wejście.",
+        "alt": "Wejście do gabinetu"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Terapia logopedyczna dzieci i dorosłych.",
+    "navTitle": "Strona",
+    "contactTitle": "Kontakt",
+    "medfile": "Profil gabinetu na Medfile",
+    "newTab": "(otwiera się w nowej karcie)",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "privacy": "Polityka prywatności",
+    "cookies": "Polityka cookies",
+    "backToTop": "Wróć na górę strony",
+    "languages": "Język strony"
   }
 }

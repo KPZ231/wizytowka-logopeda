@@ -9,11 +9,11 @@
 - Jasne, oddychające tło + **głęboki fiolet** jako jedyny mocny głos. Jasnoszary to tło pomocnicze, nigdy akcent.
 - Strona **nie może wyglądać na pustą**. Pustkę wypełniamy *strukturą i głębią*, nie dekoracją:
   - naprzemienne tła sekcji (`background` → `surface-tint` → `surface` → `surface-strong`), żeby scroll miał rytm;
-  - miękkie fioletowe poświaty (`wash-violet`) w hero i przy sekcjach CTA;
+  - miękkie fioletowe poświaty (`wash-violet`) przy sekcjach CTA (hero ma własne tło: chmury);
   - duże zaokrąglone „wyspy" (karty, panele) zamiast treści luzem na białym;
   - dużą typografią: nagłówki naprawdę duże, kontrast skali 4:1 między H1 a tekstem;
   - realne treści z danych klienta (godziny, ceny, adres) podane wprost, bez lania wody.
-- Jedna rzecz zapamiętywalna: **hero z dużym nagłówkiem i fioletową poświatą**. Reszta cicha i konsekwentna.
+- Jedna rzecz zapamiętywalna: **hero z chmurami, trzema clipboardami i dużym, półprzezroczystym nagłówkiem** (szczegóły: sekcja 9). Reszta cicha i konsekwentna.
 - Bez: stockowych uśmiechniętych dzieci jako wypełniacza, gradientów tęczowych, etykiet WERSALIKAMI nad każdym nagłówkiem, numerowania, które nie oznacza kolejności.
 
 ## 2. Szerokość i układ
@@ -54,9 +54,10 @@ Zasady:
 
 - **Krój strony: Manrope** (jedna rodzina do nagłówków i tekstu), ładowany przez `next/font` w `app/[lang]/layout.tsx` jako `--font-manrope` → `font-sans`. Hierarchię budujemy rozmiarem, wagą (400/600/700) i kolorem, nie drugim krojem.
 - Podzbiory `latin`, `latin-ext` (polskie ą ć ę ł ń ó ś ź ż) i `cyrillic` (UK) są obowiązkowe — bez `latin-ext` diakrytyki spadają na font systemowy.
-- Skala (mobile → desktop, `clamp`): H1 `2.5rem → 4.5rem`, H2 `2rem → 3rem`, H3 `1.25rem → 1.5rem`, tekst `1rem`, tekst duży `1.125rem`, drobny `0.875rem` (nigdy < 14 px).
-- Nagłówki: waga 600–700, `line-height` 1.1–1.2, `letter-spacing` lekko ujemny (`-0.02em`) tylko dla H1/H2. Tekst: waga 400, `line-height` 1.65.
+- Skala (mobile → desktop, `clamp`): H1 `2.5rem → 4.5rem` (hero: `2.5rem → 5.5rem`, waga 800), H2 `2rem → 3rem`, H3 `1.25rem → 1.5rem`, tekst `1rem`, tekst duży `1.125rem`, drobny `0.875rem` (nigdy < 14 px).
+- Nagłówki: waga 600–700 (H1 w hero: 800, `letter-spacing` `-0.03em`), `line-height` 1.1–1.2, `letter-spacing` lekko ujemny (`-0.02em`) tylko dla H1/H2. Tekst: waga 400, `line-height` 1.65.
 - Jeden `h1` na stronę, hierarchia bez przeskoków.
+- Nagłówek hero jest **półprzezroczysty i miesza się z tłem** (gradient fioletu 80% w `bg-clip-text` + `mix-blend-multiply` na kontenerze). Wymaga to kontenera z własnym stacking context oraz `pb-[0.18em]`, żeby nie ucinać dolnych wydłużeń liter (g, y, p). Nie stosuj tego do tekstu, który musi mieć pełny kontrast (akapity, ceny, formularze).
 - Ceny i godziny: `font-variant-numeric: tabular-nums`.
 - Bez akcentowania jednego słowa w nagłówku innym kolorem/kursywą jako domyślnego chwytu.
 
@@ -77,10 +78,13 @@ Filozofia: **ruch odpowiada na akcję użytkownika albo prowadzi wzrok w jednym 
 - Wciśnięcie: klasa `pressable` (`scale(0.97)` na `:active`) na każdym przycisku/linku-przycisku.
 - Nigdy start od `scale(0)` — min. `0.95` z `opacity: 0`.
 - Wejście sekcji: wspólne warianty w jednym module (`fade + translateY(16px)`, stagger 50–80 ms dla dzieci), `once: true`, **tylko treść poniżej zgięcia**. Hero: jedna zorkiestrowana sekwencja przy ładowaniu. Nie animuj każdej karty osobno.
+- **Ruch sterowany scrollem (głębia):** warstwy poruszają się z różną prędkością — tło najwolniej, treść najszybciej, elementy „bliżej" widza opadają/uciekają szybciej. Zawsze `transform`/`opacity`, liczone z `useScroll` + `useTransform` w komponencie klienckim. Wejście i scroll na **osobnych elementach** (wrapper ze scrollem, w środku element z animacją wejścia), żeby nie nadpisywały swoich transformów.
+- Postęp scrolla przepuszczaj przez zwykły `useMotionValue` (`useMotionValueEvent`), bo natywny ScrollTimeline przy `sticky` zostawia `opacity` na 1.
+- Zanikanie warstw: miękko (maska `mask-image` z gradientem / opacity), nigdy ostra krawędź obrazu; tło schodzi dopiero po treści.
 - Hover tylko za `@media (hover: hover) and (pointer: fine)`.
 - Akcje z klawiatury (nawigacja, skip link, przełącznik języka) bez animacji.
 - Przejścia stron: krótki fade (≤ 200 ms), bez przesuwania układu.
-- `MotionConfig reducedMotion="user"` w layoucie + reguła globalna w CSS. Smooth scroll i parallax wyłączone przy `prefers-reduced-motion: reduce`.
+- `MotionConfig reducedMotion="user"` w layoucie + reguła globalna w CSS. Smooth scroll i parallax wyłączone przy `prefers-reduced-motion: reduce` (w kodzie: `useReducedMotion` → brak stylów scrollowych, układ statyczny).
 
 ## 7. Komponenty — minimum spójności
 
@@ -100,13 +104,25 @@ Filozofia: **ruch odpowiada na akcję użytkownika albo prowadzi wzrok w jednym 
 - Tylko fakty z `CLAUDE.md` (dane klienta). Brak opinii, dyplomów i liczb pacjentów, dopóki klient ich nie poda.
 - Teksty w słownikach per język, PL z pełnymi diakrytykami; UK/EN nie dosłowne z tłumacza.
 
-## 9. Checklista przed scaleniem zmiany UI
+## 9. Hero (strona główna)
+
+Układ wzorowany na zrzucie od klienta; komponent: `components/hero.tsx`, zasoby: `public/hero/` (`Background.svg`, `Clip_Left.svg`, `Clip_Center.svg`, `Clip_RIght.svg`).
+
+- **Warstwy (od tyłu):** chmury (`object-cover`, edge-to-edge) → tekst (H1 + krótki opis, wyśrodkowany, bez CTA) → trzy clipboardy przy dolnej krawędzi.
+- **Clipboardy:** środkowy wyżej i na wierzchu (`z-10`), boczne niżej i lekko nachodzące; dolna część ucięta ujemnym `margin-bottom` (nie `overflow` animowanego elementu). Szerokość ok. 38% każdy, max 640 px.
+- **Sekwencja wejścia:** chmury fade `opacity 0→1` (0,9 s, ease-out) → clipboardy **lewy 0,3 s, prawy 0,42 s, środkowy 0,54 s** (wjazd z dołu + fade) → nagłówek (1,1 s, tylko opacity, żeby nie zburzyć blendowania) → opis.
+- **Scroll:** sekcja wyższa od ekranu (`h-[230svh]`) z `sticky` zawartością. Kolejno: clipboardy znikają (L → P → Ś, opadają, maleją do 0,94, gasną; boczne opadają głębiej), tekst ucieka w górę szybciej niż tło, chmury powoli wygasają od dołu maską i dopiero na końcu całkowicie.
+- **Zasoby:** SVG-i to osadzone rastry (tło 3,4 MB, boczne clipboardy po 1,2 MB) — docelowo WebP/AVIF z alfą i `next/image`, by utrzymać LCP < 2,5 s.
+- **Treść:** tylko fakty z danych klienta; teksty w słownikach pl/en/uk (`home.title`, `home.lead`).
+
+## 10. Checklista przed scaleniem zmiany UI
 
 - [ ] Tylko tokeny kolorów i promieni, brak surowych hexów
 - [ ] Treść w `page-w`, tła sekcji edge-to-edge
 - [ ] Kontrast ≥ 4.5:1 (tekst) / 3:1 (UI); test na `surface-tint`
 - [ ] Focus widoczny, pełna obsługa klawiaturą, cele ≥ 44 px
-- [ ] Animacje: tylko transform/opacity, `prefers-reduced-motion` działa
+- [ ] Animacje: tylko transform/opacity, `prefers-reduced-motion` działa (także efekty scrollowe)
+- [ ] Efekty scrollowe sprawdzone na aktywnej karcie (w tle przeglądarka wstrzymuje klatki) i bez ostrej krawędzi tła
 - [ ] Sprawdzone przy 320, 375, 768, 1280 px — bez poziomego scrolla
 - [ ] CLS < 0.1; obrazy z wymiarami
 - [ ] Sekcja nie wygląda pusto: tło, rytm, hierarchia rozmiaru

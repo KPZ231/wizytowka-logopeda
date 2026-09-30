@@ -45,6 +45,8 @@ Nie wymyślaj opinii, dyplomów, liczby pacjentów ani innych faktów, których 
 
 ## Styl i wygląd
 
+**Przed każdą pracą nad UI przeczytaj @DESIGN.md** (feeling strony, szerokość treści 80% / `page-w`, paleta, font Manrope, zasady ruchu, checklista). Tokeny żyją w `app/globals.css`; przy konflikcie z poniższymi punktami rozstrzyga DESIGN.md.
+
 - Kolor przewodni: fiolet (różne odcienie jako akcenty) + akcenty jasnoszare. Kolory jako tokeny/zmienne CSS w `@theme`, nie wartości rozsiane po komponentach.
 - Strona ma wyglądać premium: płynny smooth scroll, eleganckie animacje przejść, wysoka jakość UX/UI.
 - Animacje: transform/opacity, bez animowania layoutu; obowiązkowo respektuj `prefers-reduced-motion` (WCAG 2.3.3 / dobra praktyka).

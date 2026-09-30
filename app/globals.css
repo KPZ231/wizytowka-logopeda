@@ -1,26 +1,186 @@
 @import "tailwindcss";
 
+/* Tokeny projektu — zasady i uzasadnienia w DESIGN.md. Komponenty używają wyłącznie tokenów semantycznych. */
+
 :root {
+  color-scheme: light;
+
+  /* Skala fioletu (akcent przewodni) */
+  --violet-50: #f7f4fd;
+  --violet-100: #ede7fa;
+  --violet-200: #dccff5;
+  --violet-300: #c2aeec;
+  --violet-400: #a184de;
+  --violet-500: #8459cf;
+  --violet-600: #6d3fb8;
+  --violet-700: #57308f;
+  --violet-800: #3f2368;
+  --violet-900: #2a1748;
+  --violet-950: #1a0e2e;
+
+  /* Skala jasnoszara (lekko ocieplona fioletem, by nie „brudziła" bieli) */
+  --gray-50: #f8f8fa;
+  --gray-100: #f0f0f4;
+  --gray-200: #e3e3ea;
+  --gray-300: #cfcfda;
+  --gray-500: #6b6b7b;
+  --gray-700: #44444f;
+  --gray-900: #1f1f29;
+
+  /* Semantyka */
   --background: #ffffff;
-  --foreground: #171717;
+  --surface: var(--gray-50);
+  --surface-tint: var(--violet-50);
+  --surface-strong: var(--violet-900);
+  --foreground: var(--gray-900);
+  --foreground-muted: var(--gray-700);
+  --foreground-subtle: var(--gray-500);
+  --foreground-on-strong: #ffffff;
+  --border: var(--gray-200);
+  --border-strong: var(--gray-300);
+  --accent: var(--violet-600);
+  --accent-hover: var(--violet-700);
+  --accent-soft: var(--violet-100);
+  --focus-ring: var(--violet-500);
+  --danger: #b3261e;
+  --success: #1e6b3a;
+
+  /* Układ */
+  --page-width: 80%; /* w-4/5 — szerokość treści i komponentów */
+  --section-y: clamp(4rem, 9vw, 8rem);
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.75rem;
+  --radius-pill: 999px;
+
+  /* Cienie: fioletowe, nigdy czarne */
+  --shadow-sm: 0 1px 2px rgb(42 23 72 / 0.06), 0 1px 3px rgb(42 23 72 / 0.08);
+  --shadow-md: 0 8px 24px -8px rgb(87 48 143 / 0.18);
+  --shadow-lg: 0 24px 60px -20px rgb(87 48 143 / 0.30);
+
+  /* Ruch */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --duration-press: 140ms;
+  --duration-ui: 200ms;
+  --duration-reveal: 600ms;
 }
 
 @theme inline {
+  --color-violet-50: var(--violet-50);
+  --color-violet-100: var(--violet-100);
+  --color-violet-200: var(--violet-200);
+  --color-violet-300: var(--violet-300);
+  --color-violet-400: var(--violet-400);
+  --color-violet-500: var(--violet-500);
+  --color-violet-600: var(--violet-600);
+  --color-violet-700: var(--violet-700);
+  --color-violet-800: var(--violet-800);
+  --color-violet-900: var(--violet-900);
+  --color-violet-950: var(--violet-950);
+
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-500: var(--gray-500);
+  --color-gray-700: var(--gray-700);
+  --color-gray-900: var(--gray-900);
+
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-tint: var(--surface-tint);
+  --color-surface-strong: var(--surface-strong);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--foreground-muted);
+  --color-subtle: var(--foreground-subtle);
+  --color-on-strong: var(--foreground-on-strong);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+
+  --font-sans: var(--font-manrope);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --ease-out: var(--ease-out);
+  --ease-in-out: var(--ease-in-out);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
+}
+
+/* Pod sticky nagłówkiem kotwice nie mogą chować tytułu sekcji */
+html {
+  scroll-padding-top: 6rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+::selection {
+  background: var(--violet-200);
+  color: var(--violet-950);
+}
+
+/* Szerokość treści: w-4/5 (80%) wyśrodkowana. Zmiana wartości w jednym miejscu: --page-width. */
+@utility page-w {
+  width: var(--page-width);
+  margin-inline: auto;
+}
+
+/* Rytm pionowy sekcji */
+@utility section-y {
+  padding-block: var(--section-y);
+}
+
+/* Każdy element wciskalny dostaje sprężysty feedback (Emil: scale 0.97 na :active) */
+@utility pressable {
+  transition: transform var(--duration-press) var(--ease-out),
+    background-color var(--duration-ui) ease, box-shadow var(--duration-ui) ease;
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+/* Miękka fioletowa poświata — wypełnia puste tło bez obrazków */
+@utility wash-violet {
+  background-image:
+    radial-gradient(60% 50% at 15% 10%, var(--violet-100) 0%, transparent 70%),
+    radial-gradient(45% 40% at 90% 30%, var(--violet-200) 0%, transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

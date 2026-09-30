@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -50,7 +51,7 @@ export function SiteNav({
     <ul className="flex items-center" aria-label={nav.language}>
       {locales.map((l) => (
         <li key={l}>
-          <a
+          <Link
             href={`/${l}${rest ? `/${rest}` : ""}`}
             lang={l}
             hrefLang={l}
@@ -62,7 +63,7 @@ export function SiteNav({
             }`}
           >
             {l}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
@@ -81,7 +82,7 @@ export function SiteNav({
         aria-label={nav.label}
         className="page-w flex items-center justify-between gap-2 rounded-full border border-border bg-background/80 py-1.5 pr-1.5 pl-1.5 shadow-md backdrop-blur-md"
       >
-        <a
+        <Link
           href={`/${lang}`}
           className="pressable flex min-h-11 items-center gap-3 rounded-full pr-2 text-sm font-bold whitespace-nowrap text-foreground"
         >
@@ -95,12 +96,12 @@ export function SiteNav({
           />
           <span className="md:hidden">{nav.brandShort}</span>
           <span className="hidden md:inline">{nav.brand}</span>
-        </a>
+        </Link>
 
         <ul className="hidden items-center lg:flex">
           {links.map(([key, path]) => (
             <li key={key}>
-              <a
+              <Link
                 href={`/${lang}${path}`}
                 aria-current={
                   path === "/blog" && pathname.startsWith(`/${lang}/blog`)
@@ -110,7 +111,7 @@ export function SiteNav({
                 className={linkClass}
               >
                 {nav[key]}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -161,7 +162,7 @@ export function SiteNav({
               <ul>
                 {links.map(([key, path]) => (
                   <li key={key}>
-                    <a
+                    <Link
                       href={`/${lang}${path}`}
                       aria-current={
                         path === "/blog" && pathname.startsWith(`/${lang}/blog`)
@@ -171,7 +172,7 @@ export function SiteNav({
                       className={`${linkClass} w-full`}
                     >
                       {nav[key]}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

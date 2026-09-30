@@ -5,6 +5,7 @@ import { hasLocale, locales } from "@/i18n/config";
 import { BUSINESS, CREATOR, IS_PRODUCTION_URL, OG_LOCALE, SITE_URL } from "@/lib/site";
 import { getDictionary } from "./dictionaries";
 import { MotionProvider } from "./motion-provider";
+import { SmoothScroll } from "../../components/smooth-scroll";
 import { SiteFooter } from "../../components/site-footer";
 import { SiteNav } from "../../components/site-nav";
 import "../globals.css";
@@ -65,6 +66,7 @@ export default async function RootLayout({
     <html lang={lang} className={`${manrope.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <MotionProvider>
+          <SmoothScroll />
           <SiteNav lang={lang} nav={nav} />
           {children}
           <SiteFooter lang={lang} dict={dict} />

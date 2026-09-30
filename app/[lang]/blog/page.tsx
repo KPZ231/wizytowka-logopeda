@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ViewTransition } from "react";
 import { BlogIndex } from "@/components/blog/blog-index";
 import { Item, Stagger } from "@/components/reveal";
 import { hasLocale, locales } from "@/i18n/config";
@@ -40,7 +41,8 @@ export default async function BlogPage({ params }: PageProps<"/[lang]/blog">) {
   const posts = (await getPosts(lang)).map(toCard);
 
   return (
-    <main
+    <ViewTransition default="page">
+<main
       id="main"
       className="flex-1 bg-background pt-32 pb-20 md:pt-44 md:pb-28"
     >
@@ -58,5 +60,6 @@ export default async function BlogPage({ params }: PageProps<"/[lang]/blog">) {
         </div>
       </Stagger>
     </main>
+</ViewTransition>
   );
 }

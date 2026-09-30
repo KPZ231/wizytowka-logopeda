@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { Locale } from "@/i18n/config";
 import { dayNames } from "./contact-section";
@@ -57,9 +58,9 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
               <ul className="mt-3">
                 {links.map(([key, path]) => (
                   <li key={key}>
-                    <a href={`/${lang}${path}`} className={link}>
+                    <Link href={`/${lang}${path}`} className={link}>
                       {nav[key]}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -134,14 +135,14 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           </div>
           <ul className="flex flex-wrap gap-x-6">
             <li>
-              <a href={`/${lang}/polityka-prywatnosci`} className={link}>
+              <Link href={`/${lang}/polityka-prywatnosci`} className={link}>
                 {footer.privacy}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href={`/${lang}/cookies`} className={link}>
+              <Link href={`/${lang}/cookies`} className={link}>
                 {footer.cookies}
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="flex items-center justify-between gap-4 md:justify-end">

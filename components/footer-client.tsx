@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUp } from "lucide-react";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { usePathname } from "next/navigation";
 import { locales, type Locale } from "@/i18n/config";
@@ -73,7 +74,7 @@ export function FooterLanguages({
     <ul className="flex items-center gap-1" aria-label={label}>
       {locales.map((l) => (
         <li key={l}>
-          <a
+          <Link
             href={`/${l}${rest ? `/${rest}` : ""}`}
             lang={l}
             hrefLang={l}
@@ -85,7 +86,7 @@ export function FooterLanguages({
             }`}
           >
             {l}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

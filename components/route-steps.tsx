@@ -1,7 +1,7 @@
 "use client";
 
 import { Camera } from "lucide-react";
-import Image from "next/image";
+import { SpinImage } from "@/components/spin-image";
 import {
   motion,
   useInView,
@@ -104,7 +104,7 @@ function StepItem({
       <p className="mt-2 max-w-prose text-muted">{step.text}</p>
       <figure className="relative mt-5 aspect-[4/3] overflow-hidden rounded-md bg-accent-soft shadow-sm">
         {src ? (
-          <Image
+          <SpinImage
             src={src}
             alt={step.alt}
             fill

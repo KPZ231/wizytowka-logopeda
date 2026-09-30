@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, type Variants } from "motion/react";
-import Image from "next/image";
+import { SpinImage } from "@/components/spin-image";
 import { useEffect, useState, useSyncExternalStore, type CSSProperties } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { Item, Stagger } from "./reveal";
@@ -174,7 +174,7 @@ export function OfficeBoard({ office }: { office: Dictionary["office"] }) {
                     />
                     <span className="relative block aspect-[4/3] overflow-hidden bg-accent-soft">
                       {SRC[i] && (
-                        <Image
+                        <SpinImage
                           src={SRC[i]}
                           alt={photo.alt}
                           fill

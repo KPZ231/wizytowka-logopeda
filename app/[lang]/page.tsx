@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { ViewTransition } from "react";
 import { hasLocale } from "@/i18n/config";
 import { getReviews, getSummary } from "@/lib/reviews/reviews";
 import { BUSINESS, LOGO_PATH, SITE_URL } from "@/lib/site";
@@ -55,7 +56,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   }).replace(/</g, "\\u003c");
 
   return (
-    <main id="main" className="flex flex-1 flex-col">
+    <ViewTransition default="page">
+<main id="main" className="flex flex-1 flex-col">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd }}
@@ -75,5 +77,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <FaqSection faq={dict.faq} />
       <ContactSection contact={dict.contact} lang={lang} />
     </main>
+</ViewTransition>
   );
 }

@@ -88,10 +88,10 @@ export function Hero({ title, lead }: { title: string; lead: string }) {
           })}
         >
           <motion.img
-            src="/hero/Background.svg"
+            src="/hero/Background.webp"
             alt=""
-            width={1366}
-            height={768}
+            width={1600}
+            height={900}
             fetchPriority="high"
             className="size-full object-cover"
             initial={{ opacity: 0 }}
@@ -132,10 +132,10 @@ export function Hero({ title, lead }: { title: string; lead: string }) {
             style={s(left)}
           >
             <motion.img
-              src="/hero/Clip_Left.svg"
+              src="/hero/Clip_Left.webp"
               alt=""
-              width={606}
-              height={615}
+              width={640}
+              height={650}
               className="w-full"
               {...clipEnter(0.3)}
             />
@@ -145,10 +145,11 @@ export function Hero({ title, lead }: { title: string; lead: string }) {
             style={s(center)}
           >
             <motion.img
-              src="/hero/Clip_Center.svg"
+              src="/hero/Clip_Center.webp"
+              fetchPriority="high"
               alt=""
-              width={606}
-              height={615}
+              width={640}
+              height={650}
               className="w-full"
               {...clipEnter(0.54)}
             />
@@ -158,10 +159,10 @@ export function Hero({ title, lead }: { title: string; lead: string }) {
             style={s(right)}
           >
             <motion.img
-              src="/hero/Clip_RIght.svg"
+              src="/hero/Clip_RIght.webp"
               alt=""
-              width={606}
-              height={615}
+              width={640}
+              height={650}
               className="w-full"
               {...clipEnter(0.42)}
             />

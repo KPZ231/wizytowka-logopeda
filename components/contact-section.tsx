@@ -57,7 +57,7 @@ export function ContactSection({
             </p>
           </Item>
           <Item>
-            <dl className="mt-10 grid gap-8">
+            <div className="mt-10 grid gap-8">
               <div className="flex items-start gap-4">
                 <Lottie
                   src="/lottie/phone.json"
@@ -69,7 +69,7 @@ export function ContactSection({
                     />
                   }
                 />
-                <div>
+                <dl>
                   <dt className="text-sm font-semibold text-violet-200">
                     {contact.phoneLabel}
                   </dt>
@@ -78,7 +78,7 @@ export function ContactSection({
                       {PHONE_DISPLAY}
                     </a>
                   </dd>
-                </div>
+                </dl>
               </div>
               <div className="flex items-start gap-4">
                 <Lottie
@@ -91,7 +91,7 @@ export function ContactSection({
                     />
                   }
                 />
-                <div>
+                <dl>
                   <dt className="text-sm font-semibold text-violet-200">
                     {contact.addressLabel}
                   </dt>
@@ -106,9 +106,9 @@ export function ContactSection({
                       {contact.map}
                     </a>
                   </dd>
-                </div>
+                </dl>
               </div>
-            </dl>
+            </div>
           </Item>
           <Item>
             <MapEmbed

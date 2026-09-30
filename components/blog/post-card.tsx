@@ -6,7 +6,7 @@ import {
   Puzzle,
   type LucideIcon,
 } from "lucide-react";
-import Image from "next/image";
+import { SpinImage } from "@/components/spin-image";
 import Link from "next/link";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { Locale } from "@/i18n/config";
@@ -36,7 +36,7 @@ export function Cover({
       className={`relative overflow-hidden bg-linear-to-br from-violet-200 via-violet-100 to-violet-50 ${className}`}
     >
       {post.cover ? (
-        <Image
+        <SpinImage
           src={post.cover.src}
           alt={post.cover.alt}
           fill

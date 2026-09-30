@@ -116,9 +116,33 @@
   --ease-in-out: var(--ease-in-out);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
+/* Smooth scroll robi Lenis (components/smooth-scroll.tsx); CSS-owy by się z nim gryzł */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+/* Przejście między stronami: krótki crossfade, bez przesuwania układu (DESIGN.md §6) */
+::view-transition-old(.page) {
+  animation: 120ms var(--ease-out) both page-out;
+}
+::view-transition-new(.page) {
+  animation: 200ms var(--ease-out) both page-in;
+}
+@keyframes page-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes page-in {
+  from {
+    opacity: 0;
   }
 }
 
@@ -219,5 +243,14 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* `*` nie obejmuje pseudo-elementów View Transitions */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
 }

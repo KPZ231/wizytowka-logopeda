@@ -1,5 +1,5 @@
 import { FileText } from "lucide-react";
-import Image from "next/image";
+import { SpinImage } from "@/components/spin-image";
 import { Lottie } from "./lottie";
 import { Item, Stagger } from "./reveal";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
@@ -28,7 +28,7 @@ export function MedfileSection({
           <div className="max-w-prose">
             {/* logo ma duże marginesy w pliku 400×400 — object-cover w proporcji 7:3 przycina puste pole */}
             <Item className="relative mb-6 aspect-[7/3] w-40 overflow-hidden">
-              <Image
+              <SpinImage
                 src="/medfile_logo.png"
                 alt="Medfile"
                 fill

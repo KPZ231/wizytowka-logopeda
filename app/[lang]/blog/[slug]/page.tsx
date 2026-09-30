@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ViewTransition } from "react";
 import { Cover } from "@/components/blog/post-card";
 import { CopyLink, ReadingProgress, Toc } from "@/components/blog/post-client";
 import { PostBody } from "@/components/blog/post-body";
@@ -86,6 +87,7 @@ export default async function PostPage({
   }).replace(/</g, "\\u003c");
 
   return (
+    <ViewTransition default="page">
     <>
       <ReadingProgress targetId="post-article" />
       <main id="main" className="flex-1 bg-background pt-32 md:pt-44">
@@ -168,5 +170,6 @@ export default async function PostPage({
         <RelatedPosts posts={related} lang={lang} blog={blog} />
       </main>
     </>
+    </ViewTransition>
   );
 }

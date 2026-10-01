@@ -1,15 +1,21 @@
 import type { Locale } from "@/i18n/config";
 
+// Host bez protokołu; po podpięciu domeny klienta Vercel sam podmienia go na tę domenę (po redeployu).
+const vercelProd = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+
 /**
- * Adres produkcyjny (canonical, sitemap, JSON-LD). Domeny klienta jeszcze nie znamy —
- * ustaw NEXT_PUBLIC_SITE_URL w .env / na hostingu; bez tego działa tylko lokalny fallback.
+ * Adres produkcyjny (canonical, sitemap, JSON-LD). Kolejność: NEXT_PUBLIC_SITE_URL (nadpisanie),
+ * domena produkcyjna z Vercela, lokalny fallback.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (vercelProd ? `https://${vercelProd}` : "http://localhost:3000")
 ).replace(/\/$/, "");
 
-/** Bez ustawionej domeny (lokal, preview) strona dostaje noindex. */
-export const IS_PRODUCTION_URL = Boolean(process.env.NEXT_PUBLIC_SITE_URL);
+/** Na Vercelu indeksuje tylko środowisko production (preview nigdy); poza Vercelem — gdy ustawiono domenę. */
+export const IS_INDEXABLE = process.env.VERCEL_ENV
+  ? process.env.VERCEL_ENV === "production"
+  : Boolean(process.env.NEXT_PUBLIC_SITE_URL);
 
 /** NAP — jedno źródło dla JSON-LD (dane klienta z CLAUDE.md). */
 export const BUSINESS = {

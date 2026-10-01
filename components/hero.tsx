@@ -10,21 +10,7 @@ import {
   useTransform,
   type MotionValue,
 } from "motion/react";
-import { useRef } from "react";
-
-const EASE_OUT = [0.23, 1, 0.32, 1] as const;
-
-const clipEnter = (delay: number) => ({
-  initial: { opacity: 0, y: "40%" },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, delay, ease: EASE_OUT },
-});
-
-const textEnter = (delay: number) => ({
-  initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, delay, ease: EASE_OUT },
-});
+import { useRef, type CSSProperties } from "react";
 
 /**
  * Znikanie clipboardu przy scrollu: opada w dół, lekko się zmniejsza i gaśnie.
@@ -87,16 +73,13 @@ export function Hero({ title, lead }: { title: string; lead: string }) {
             WebkitMaskImage: cloudMask,
           })}
         >
-          <motion.img
+          <img
             src="/hero/Background.webp"
             alt=""
             width={1600}
             height={900}
             fetchPriority="high"
             className="size-full object-cover"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.9, ease: EASE_OUT }}
           />
         </motion.div>
 
@@ -106,65 +89,64 @@ export function Hero({ title, lead }: { title: string; lead: string }) {
           className="page-w relative z-20 pt-[clamp(6rem,18vh,10rem)] text-center mix-blend-multiply"
           style={s({ y: textY, opacity: textOpacity })}
         >
-          <motion.h1
+          <h1
             style={{
               backgroundImage:
                 "linear-gradient(180deg, color-mix(in srgb, var(--violet-500) 80%, transparent), color-mix(in srgb, var(--violet-800) 80%, transparent))",
-            }}
-            className="bg-clip-text pb-[0.18em] text-[clamp(2.5rem,7vw,5.5rem)] leading-[1.1] font-extrabold tracking-[-0.03em] text-transparent"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.1, ease: EASE_OUT }}
+              "--delay": "1.1s",
+              "--d": "0.8s",
+            } as CSSProperties}
+            className="hero-fade bg-clip-text pb-[0.18em] text-[clamp(2.5rem,7vw,5.5rem)] leading-[1.1] font-extrabold tracking-[-0.03em] text-transparent"
           >
             {title}
-          </motion.h1>
-          <motion.p
-            className="mx-auto mt-6 max-w-[60ch] text-lg font-semibold text-muted"
-            {...textEnter(1.18)}
+          </h1>
+          <p
+            className="hero-rise mx-auto mt-6 max-w-[60ch] text-lg font-semibold text-muted"
+            style={{ "--delay": "1.18s", "--d": "0.6s", "--rise": "16px" } as CSSProperties}
           >
             {lead}
-          </motion.p>
+          </p>
         </motion.div>
 
         <div className="pointer-events-none mt-auto flex items-end justify-center">
           <motion.div
-            className="-mr-[9%] -mb-[24%] w-[38%] max-w-[640px]"
+            className="-mr-[26%] -mb-[12%] w-[46%] max-w-[640px] md:-mr-[9%] md:-mb-[24%] md:w-[38%]"
             style={s(left)}
           >
-            <motion.img
+            <img
               src="/hero/Clip_Left.webp"
               alt=""
               width={640}
               height={650}
-              className="w-full"
-              {...clipEnter(0.3)}
+              className="hero-rise w-full"
+            style={{ "--delay": "0.3s" } as CSSProperties}
             />
           </motion.div>
           <motion.div
-            className="relative z-10 -mb-[15%] w-[38%] max-w-[640px]"
+            className="relative z-10 -mb-[6%] w-[62%] max-w-[640px] md:-mb-[15%] md:w-[38%]"
             style={s(center)}
           >
-            <motion.img
+            <img
               src="/hero/Clip_Center.webp"
               fetchPriority="high"
               alt=""
               width={640}
               height={650}
-              className="w-full"
-              {...clipEnter(0.54)}
+              className="hero-rise w-full"
+            style={{ "--delay": "0.54s" } as CSSProperties}
             />
           </motion.div>
           <motion.div
-            className="-ml-[9%] -mb-[24%] w-[38%] max-w-[640px]"
+            className="-ml-[26%] -mb-[12%] w-[46%] max-w-[640px] md:-ml-[9%] md:-mb-[24%] md:w-[38%]"
             style={s(right)}
           >
-            <motion.img
+            <img
               src="/hero/Clip_RIght.webp"
               alt=""
               width={640}
               height={650}
-              className="w-full"
-              {...clipEnter(0.42)}
+              className="hero-rise w-full"
+            style={{ "--delay": "0.42s" } as CSSProperties}
             />
           </motion.div>
         </div>

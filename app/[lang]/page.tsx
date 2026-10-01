@@ -52,6 +52,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       price: parseInt(item.price, 10),
       itemOffered: { "@type": "Service", name: item.name },
     })),
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      `${BUSINESS.street}, ${BUSINESS.postalCode} ${BUSINESS.city}, Polska`,
+    )}`,
     sameAs: [BUSINESS.medfile],
   }).replace(/</g, "\\u003c");
 

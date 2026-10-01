@@ -151,6 +151,11 @@ html {
   scroll-padding-top: 6rem;
 }
 
+/* Odejmuje padding sekcji, żeby tytuł lądował 6rem od góry (zgodnie z offsetem w smooth-scroll.tsx) */
+section[id] {
+  scroll-margin-top: calc(var(--section-y) * -1);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -253,4 +258,21 @@ body {
   ::view-transition-new(*) {
     animation: none !important;
   }
+}
+
+/* Wejście hero w czystym CSS: animuje się od pierwszego paintu, bez czekania na hydrację
+   (inline opacity:0 z framer-motion opóźniał LCP o czas hydracji + delay). */
+@keyframes hero-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(var(--rise, 40%)); }
+  to { opacity: 1; transform: none; }
+}
+.hero-fade {
+  animation: hero-fade var(--d, 0.9s) var(--ease-out) var(--delay, 0s) both;
+}
+.hero-rise {
+  animation: hero-rise var(--d, 0.7s) var(--ease-out) var(--delay, 0s) both;
 }

@@ -2,7 +2,8 @@
 
 import Lenis from "lenis";
 import { useReducedMotion } from "motion/react";
-import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 
 /** Odstęp pod sticky nagłówkiem — zgodny z `scroll-padding-top` w globals.css (6rem). */
 const ANCHOR_OFFSET = -96;
@@ -14,6 +15,8 @@ const ANCHOR_OFFSET = -96;
  */
 export function SmoothScroll() {
   const reduce = useReducedMotion();
+  const pathname = usePathname();
+  const lenisRef = useRef<Lenis | null>(null);
 
   // Nawigacja w ukrytej karcie: przeglądarka przerywa View Transition i odrzuca jego promise.
   // Nic się nie psuje (strona i tak się przełącza), więc nie zaśmiecamy konsoli.
@@ -28,6 +31,7 @@ export function SmoothScroll() {
   useEffect(() => {
     if (reduce) return;
     const lenis = new Lenis();
+    lenisRef.current = lenis;
     let raf = requestAnimationFrame(function tick(t) {
       lenis.raf(t);
       raf = requestAnimationFrame(tick);
@@ -42,7 +46,9 @@ export function SmoothScroll() {
       if (!el) return;
       e.preventDefault();
       e.stopPropagation();
-      lenis.scrollTo(el, { offset: ANCHOR_OFFSET });
+      // Tytuł sekcji ma wylądować pod nawigacją, a nie 96 px + padding sekcji niżej
+      const pad = parseFloat(getComputedStyle(el).paddingTop) || 0;
+      lenis.scrollTo(el, { offset: ANCHOR_OFFSET + pad });
       history.pushState(null, "", a.hash);
     };
     document.addEventListener("click", onClick, true);
@@ -51,8 +57,16 @@ export function SmoothScroll() {
       document.removeEventListener("click", onClick, true);
       cancelAnimationFrame(raf);
       lenis.destroy();
+      lenisRef.current = null;
     };
   }, [reduce]);
+
+  // Nowa strona zawsze od góry (Lenis trzyma własną pozycję i nadpisywał reset z Next); kotwice `#id` zostawiamy przeglądarce
+  useEffect(() => {
+    if (location.hash) return;
+    lenisRef.current?.scrollTo(0, { immediate: true, force: true });
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return null;
 }

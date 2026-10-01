@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Manrope } from "next/font/google";
 import { hasLocale, locales } from "@/i18n/config";
-import { BUSINESS, CREATOR, IS_PRODUCTION_URL, OG_LOCALE, SITE_URL } from "@/lib/site";
+import { BUSINESS, CREATOR, IS_INDEXABLE, OG_LOCALE, SITE_URL } from "@/lib/site";
 import { getDictionary } from "./dictionaries";
 import { MotionProvider } from "./motion-provider";
 import { SmoothScroll } from "../../components/smooth-scroll";
@@ -31,8 +31,8 @@ export async function generateMetadata({
     authors: [{ name: CREATOR.name, url: CREATOR.url }],
     creator: CREATOR.name,
     publisher: BUSINESS.name,
-    // bez domeny produkcyjnej (lokal/preview) nie indeksujemy
-    robots: IS_PRODUCTION_URL ? undefined : { index: false, follow: false },
+    // lokal i preview nie są indeksowane
+    robots: IS_INDEXABLE ? undefined : { index: false, follow: false },
     alternates: {
       canonical: `/${lang}`,
       languages: {

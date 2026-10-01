@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { Locale } from "@/i18n/config";
+import { BUSINESS } from "@/lib/site";
 import { dayNames } from "./contact-section";
 import { BackToTop, FooterLanguages, Wordmark } from "./footer-client";
 import { Item, Stagger } from "./reveal";
@@ -11,7 +12,7 @@ const NAME = "Gabinet Logopedyczny Kinga Krajs";
 const ADDRESS = ["Biernota 11", "44-230 Czerwionka"];
 const PHONE_DISPLAY = "+48 518 542 193";
 const PHONE_HREF = "tel:+48518542193";
-const MEDFILE_URL = "https://www.medfile.pl/kinga-krajs/logopeda/polska/";
+const MEDFILE_URL = BUSINESS.medfile;
 const OPEN_DAYS = [1, 3] as const;
 const CREDIT_URL = "https://www.kpzsproductions.pl";
 

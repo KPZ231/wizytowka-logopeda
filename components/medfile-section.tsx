@@ -1,11 +1,11 @@
 import { FileText } from "lucide-react";
 import { SpinImage } from "@/components/spin-image";
+import { BUSINESS } from "@/lib/site";
 import { Lottie } from "./lottie";
 import { Item, Stagger } from "./reveal";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 
-export const MEDFILE_URL =
-  "https://www.medfile.pl/kinga-krajs/logopeda/polska/";
+export const MEDFILE_URL = BUSINESS.medfile;
 
 /**
  * Blok kierujący do profilu gabinetu na Medfile.
@@ -63,12 +63,12 @@ export function MedfileSection({
                 }
               />
             </div>
-            <Item className="self-start md:self-auto">
+            <Item className="w-full md:w-auto">
               <a
                 href={MEDFILE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="pressable group inline-flex min-h-12 shrink-0 whitespace-nowrap items-center justify-center gap-2 self-start rounded-full bg-accent px-7 font-semibold text-on-strong hover:bg-accent-hover md:self-auto"
+                className="pressable group inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-accent px-7 py-2 text-center font-semibold text-on-strong hover:bg-accent-hover md:w-auto"
               >
                 {medfile.cta}
                 <span className="sr-only">{medfile.newTab}</span>
@@ -82,7 +82,7 @@ export function MedfileSection({
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   aria-hidden="true"
-                  className="transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  className="shrink-0 transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 >
                   <path d="M7 17 17 7M8 7h9v9" />
                 </svg>

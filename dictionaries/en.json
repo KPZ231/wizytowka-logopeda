@@ -5,7 +5,8 @@
   },
   "home": {
     "title": "Kinga Krajs Speech Therapy Practice",
-    "lead": "Therapy for speech and swallowing disorders, autism and Asperger syndrome in children and adults. Czerwionka, Tuesdays and Thursdays."
+    "role": "Educator, Speech-Language Therapist",
+    "lead": "A place where your child can speak, play and grow at their own pace. Czerwionka-Leszczyny."
   },
   "nav": {
     "brand": "Kinga Krajs Speech Therapy Practice",
@@ -128,28 +129,28 @@
     "moreLink": "Go to contact",
     "items": [
       {
-        "q": "What kind of help does speech therapist Kinga Krajs provide?",
-        "a": "Kinga Krajs is a speech and language therapist. Based on medical knowledge and experience, she provides: a speech therapy consultation (first visit) with a therapy plan and recommendations for the parent (60 min), and speech therapy sessions (follow-up visits, 30 or 45 min)."
-      },
-      {
         "q": "How much does a visit cost?",
         "a": "The speech therapy consultation (first visit) with a therapy plan and recommendations costs PLN 150 and lasts 60 minutes. A follow-up therapy visit costs PLN 80 (30 min) or PLN 120 (45 min)."
       },
       {
         "q": "Where and when does she see patients?",
-        "a": "The practice is located at Biernota 11, 44-230 Czerwionka-Leszczyny, Poland. Appointments are held on Tuesdays and Thursdays, 7:30 am–7:00 pm."
+        "a": "The practice is located at Biernota 11, 44-230 Czerwionka-Leszczyny, Poland. Sessions are held on Tuesdays and Thursdays, 7:30 am–7:00 pm."
       },
       {
         "q": "In which languages does she provide consultations?",
         "a": "Consultations are provided in Polish."
       },
       {
-        "q": "What areas does she specialise in?",
-        "a": "Kinga Krajs specialises in working with Asperger syndrome, swallowing disorders, speech disorders, speech exercises and autism."
+        "q": "Who is the therapy for?",
+        "a": "I welcome children from the age of 2. Every child develops at their own pace, so I do not use a single approach for everyone – I look for the methods and activities that best suit each child. Conversation, play, relationship and an individual approach are an important part of my therapy."
       },
       {
-        "q": "What is her education?",
-        "a": "I am an educator and a speech therapist. I completed a master's degree in early childhood and preschool education, as well as postgraduate studies in speech therapy. I am currently expanding my knowledge through postgraduate studies in autism. I have completed numerous trainings and internships."
+        "q": "What areas do I specialise in?",
+        "a": "I specialise in the diagnosis and speech therapy of children from the age of 2, with particular focus on: speech and communication development, delayed speech development, speech disorders and articulation difficulties, myofunctional and orthodontic therapy, supporting the communication development of children on the autism spectrum, aphasia and language disorders, and the correct function of the articulation organs, breathing and swallowing. In my work I focus on an individual approach, a relationship with the child, and therapy through play and activities suited to the child's needs and interests."
+      },
+      {
+        "q": "What is my education?",
+        "a": "I completed a master's degree in early childhood and preschool education, as well as postgraduate studies in speech therapy. I am currently continuing my education with postgraduate studies in autism, through which I am developing my skills and expanding the knowledge needed to work with children on the autism spectrum and children with diverse developmental needs. I continuously invest in my qualifications, because I believe a good speech therapist should never stop learning, developing and looking for the best ways to support a child."
       },
       {
         "q": "How do I book a visit?",
@@ -246,35 +247,35 @@
     "areasLabel": "Areas of work",
     "areas": [
       {
-        "title": "Speech disorders",
-        "text": "Consultation and therapy of speech disorders in children and adults."
+        "title": "Speech therapy consultation and therapy",
+        "text": "Individual sessions tailored to the child's needs, age and abilities. During sessions I support the development of speech, communication and correct pronunciation."
       },
       {
-        "title": "Speech exercises",
-        "text": "Exercises as part of the therapy plan."
+        "title": "Therapy for speech disorders and defects",
+        "text": "Therapy for articulation difficulties and incorrect production of speech sounds. I work on preparing the speech organs, eliciting the correct sound, reinforcing it, and using it in everyday communication."
       },
       {
-        "title": "Swallowing disorders",
-        "text": "Consultation and therapy of swallowing disorders."
+        "title": "Therapy for delayed speech development and aphasia",
+        "text": "Support for children with difficulties in speech and language development. Therapy includes, among others, developing comprehension, vocabulary, building statements and communicating with others."
       },
       {
-        "title": "Autism",
-        "text": "Speech and language therapy in autism."
+        "title": "Therapy for children on the autism spectrum",
+        "text": "Individually tailored sessions supporting the development of communication, speech comprehension, establishing contact and building statements. In therapy I take into account the needs, abilities and way each child functions."
       },
       {
-        "title": "Asperger syndrome",
-        "text": "Speech and language therapy in Asperger syndrome."
+        "title": "Myofunctional and orthodontic therapy",
+        "text": "Therapy supporting the correct function of the tongue, lips and other speech organ structures. Depending on the need, it covers the resting tongue position, breathing, swallowing and functions essential for the correct development of the speech apparatus."
       }
     ],
     "processTitle": "How we work together",
     "steps": [
       {
         "title": "Consultation",
-        "text": "First visit (60 min): consultation, therapy plan and recommendations for the parent."
+        "text": "First visit (up to 60 min): diagnosis, interview with the parent, drawing up an individual therapy plan, and recommendations for work at home."
       },
       {
         "title": "Therapy",
-        "text": "Follow-up visits last 30 or 45 minutes."
+        "text": "Follow-up visits last 45 min or 30 min."
       }
     ]
   },

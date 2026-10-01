@@ -37,8 +37,14 @@ const DESKTOP: Layout = {
   ],
 };
 
-// ponytail: gdy klient dośle zdjęcia, wpisać ścieżki z public/ tutaj (brak = placeholder).
-const SRC: (string | undefined)[] = [undefined, undefined, undefined, undefined, undefined];
+
+const SRC: (string | undefined)[] = [
+  "/gallery_images/619b8200-dc15-4a67-8556-a21ff0d6a802.jpeg",
+  "/gallery_images/20261001_114332.jpg",
+  "/gallery_images/20261001_114414.jpg",
+  "/gallery_images/20261001_114445.jpg",
+  "/gallery_images/816230139_122258956052265057_3154695948022504229_n.jpg",
+];
 
 const FILL = 0.72; // miejsce pod zdjęciem na przyciski
 const TARGET_Y = 45; // środek kadru w % wysokości tablicy (nieco wyżej, nad przyciskami)
@@ -182,9 +188,6 @@ export function OfficeBoard({ office }: { office: Dictionary["office"] }) {
                           className="object-cover"
                         />
                       )}
-                    </span>
-                    <span className="mt-[6%] block truncate text-[10px] font-semibold text-foreground md:text-sm">
-                      {photo.caption}
                     </span>
                   </button>
                 </motion.div>

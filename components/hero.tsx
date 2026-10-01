@@ -30,7 +30,15 @@ function useClipExit(p: MotionValue<number>, from: number, to: number, sink: num
  * 0→1 steruje warstwami o różnych prędkościach. Wejście i scroll mają osobne elementy
  * (wrapper ze scrollem, w środku element z animacją wejścia), żeby nie nadpisywały transformów.
  */
-export function Hero({ title, lead }: { title: string; lead: string }) {
+export function Hero({
+  title,
+  role,
+  lead,
+}: {
+  title: string;
+  role: string;
+  lead: string;
+}) {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -92,7 +100,7 @@ export function Hero({ title, lead }: { title: string; lead: string }) {
           <h1
             style={{
               backgroundImage:
-                "linear-gradient(180deg, color-mix(in srgb, var(--violet-500) 80%, transparent), color-mix(in srgb, var(--violet-800) 80%, transparent))",
+                "linear-gradient(180deg, color-mix(in srgb, var(--violet-700) 92%, transparent), color-mix(in srgb, var(--violet-950) 92%, transparent))",
               "--delay": "1.1s",
               "--d": "0.8s",
             } as CSSProperties}
@@ -101,6 +109,12 @@ export function Hero({ title, lead }: { title: string; lead: string }) {
             {title}
           </h1>
           <p
+            className="hero-rise mx-auto mt-3 text-sm font-semibold tracking-wide text-accent sm:text-base"
+            style={{ "--delay": "1.14s", "--d": "0.6s", "--rise": "10px" } as CSSProperties}
+          >
+            {role}
+          </p>
+          <p
             className="hero-rise mx-auto mt-6 max-w-[60ch] text-lg font-semibold text-muted"
             style={{ "--delay": "1.18s", "--d": "0.6s", "--rise": "16px" } as CSSProperties}
           >
@@ -108,7 +122,7 @@ export function Hero({ title, lead }: { title: string; lead: string }) {
           </p>
         </motion.div>
 
-        <div className="pointer-events-none mt-auto flex items-end justify-center">
+        <div className="pointer-events-none mx-auto mt-auto flex w-full max-w-[1685px] items-end justify-center">
           <motion.div
             className="-mr-[26%] -mb-[12%] w-[46%] max-w-[640px] md:-mr-[9%] md:-mb-[24%] md:w-[38%]"
             style={s(left)}

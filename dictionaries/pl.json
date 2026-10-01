@@ -5,7 +5,8 @@
   },
   "home": {
     "title": "Gabinet Logopedyczny Kinga Krajs",
-    "lead": "Terapia zaburzeń mowy, połykania, autyzmu i zespołu Aspergera u dzieci i dorosłych. Czerwionka, wtorki i czwartki."
+    "role": "Pedagog, Logopeda",
+    "lead": "Miejsce, w którym dziecko może mówić, bawić się i rozwijać w swoim tempie. Czerwionka-Leszczyny."
   },
   "nav": {
     "brand": "Gabinet Logopedyczny Kinga Krajs",
@@ -128,28 +129,28 @@
     "moreLink": "Przejdź do kontaktu",
     "items": [
       {
-        "q": "Jakiego rodzaju porad udziela logopeda Kinga Krajs?",
-        "a": "Kinga Krajs jest logopedą. Na podstawie wiedzy medycznej i doświadczenia świadczy usługi w zakresie: konsultacji logopedycznej (pierwsza wizyta) z planem terapii i zaleceniami dla rodzica (60 min) oraz terapii logopedycznej (kolejna wizyta, 30 lub 45 min)."
-      },
-      {
         "q": "Ile kosztuje wizyta?",
         "a": "Konsultacja logopedyczna (pierwsza wizyta) z planem terapii i zaleceniami kosztuje 150 zł i trwa 60 minut. Kolejna wizyta terapeutyczna kosztuje 80 zł (30 min) lub 120 zł (45 min)."
       },
       {
         "q": "Gdzie i kiedy przyjmuje pacjentów?",
-        "a": "Gabinet mieści się pod adresem Biernota 11, 44-230 Czerwionka-Leszczyny. Przyjęcia odbywają się we wtorki i czwartki w godzinach 7:30–19:00."
+        "a": "Gabinet mieści się pod adresem Biernota 11, 44-230 Czerwionka-Leszczyny. Spotkania odbywają się we wtorki i czwartki w godzinach 7:30–19:00."
       },
       {
         "q": "W jakich językach udziela porad?",
         "a": "Porad udziela w języku polskim."
       },
       {
-        "q": "W jakich obszarach się specjalizuje?",
-        "a": "Kinga Krajs specjalizuje się w pracy z zespołem Aspergera, zaburzeniami połykania, zaburzeniami mowy, ćwiczeniami mowy oraz autyzmem."
+        "q": "Dla kogo jest terapia logopedyczna?",
+        "a": "Zapraszam dzieci od 2. roku życia. Każde dziecko rozwija się w swoim tempie, dlatego podczas terapii nie stosuję jednego schematu dla wszystkich – szukam metod i aktywności, które najlepiej odpowiadają konkretnemu dziecku. Rozmowa, zabawa, relacja i indywidualne podejście są dla mnie ważną częścią terapii."
       },
       {
-        "q": "Jakie ma wykształcenie?",
-        "a": "Jestem pedagogiem i logopedą. Ukończyłam studia magisterskie na kierunku edukacja wczesnoszkolna oraz wychowanie przedszkolne, a także studia podyplomowe z zakresu logopedii. Aktualnie poszerzam wiedzę na studiach podyplomowych z zakresu autyzmu. Ukończyłam liczne szkolenia oraz praktyki."
+        "q": "W jakich obszarach się specjalizuję?",
+        "a": "Specjalizuję się w diagnozie i terapii logopedycznej dzieci od 2. roku życia, ze szczególnym uwzględnieniem: rozwoju mowy i komunikacji, opóźnionego rozwoju mowy, wad i zaburzeń wymowy, trudności artykulacyjnych, terapii miofunkcjonalnej i ortodontycznej, wspierania dzieci w spektrum autyzmu w rozwoju komunikacji, afazji i zaburzeń językowych oraz prawidłowej pracy narządów artykulacyjnych, oddychania i połykania. W swojej pracy stawiam na indywidualne podejście, relację z dzieckiem oraz terapię poprzez zabawę i aktywności dopasowane do jego potrzeb i zainteresowań."
+      },
+      {
+        "q": "Jakie mam wykształcenie?",
+        "a": "Ukończyłam studia magisterskie na kierunku edukacja wczesnoszkolna i przedszkolna oraz studia podyplomowe z zakresu logopedii. Obecnie kontynuuję naukę na studiach podyplomowych z zakresu autyzmu, dzięki którym rozwijam swoje kompetencje i poszerzam wiedzę potrzebną w pracy z dziećmi w spektrum autyzmu oraz dziećmi o różnorodnych potrzebach rozwojowych. Stale dbam o rozwój swoich kwalifikacji, ponieważ wierzę, że dobry logopeda powinien nieustannie się uczyć, rozwijać i szukać najlepszych sposobów wspierania dziecka."
       },
       {
         "q": "Jak umówić wizytę?",
@@ -246,35 +247,35 @@
     "areasLabel": "Obszary pracy",
     "areas": [
       {
-        "title": "Zaburzenia mowy",
-        "text": "Konsultacja i terapia zaburzeń mowy u dzieci i dorosłych."
+        "title": "Konsultacja i terapia logopedyczna",
+        "text": "Indywidualne spotkania dopasowane do potrzeb, wieku i możliwości dziecka. Podczas zajęć wspieram rozwój mowy, komunikacji oraz prawidłowej wymowy."
       },
       {
-        "title": "Ćwiczenia mowy",
-        "text": "Ćwiczenia w ramach planu terapii."
+        "title": "Terapia zaburzeń i wad wymowy",
+        "text": "Terapia trudności artykulacyjnych i nieprawidłowej realizacji głosek. Pracuję nad przygotowaniem narządów mowy, wywołaniem prawidłowej głoski, jej utrwaleniem oraz wykorzystaniem jej w codziennej komunikacji."
       },
       {
-        "title": "Zaburzenia połykania",
-        "text": "Konsultacja i terapia zaburzeń połykania."
+        "title": "Terapia opóźnionego rozwoju mowy i afazji",
+        "text": "Wsparcie dzieci z trudnościami w rozwoju mowy i języka. Terapia obejmuje m.in. rozwijanie rozumienia, słownictwa, budowania wypowiedzi oraz komunikowania się z otoczeniem."
       },
       {
-        "title": "Autyzm",
-        "text": "Terapia logopedyczna w autyzmie."
+        "title": "Terapia dzieci w spektrum autyzmu",
+        "text": "Indywidualnie dopasowane zajęcia wspierające rozwój komunikacji, rozumienia mowy, nawiązywania kontaktu i budowania wypowiedzi. W terapii uwzględniam potrzeby, możliwości oraz sposób funkcjonowania każdego dziecka."
       },
       {
-        "title": "Zespół Aspergera",
-        "text": "Terapia logopedyczna w zespole Aspergera."
+        "title": "Terapia miofunkcjonalna i ortodontyczna",
+        "text": "Terapia wspierająca prawidłową pracę języka, warg i pozostałych struktur narządów mowy. W zależności od potrzeb obejmuje pracę nad pozycją spoczynkową języka, oddychaniem, połykaniem oraz funkcjami niezbędnymi dla prawidłowego rozwoju aparatu mowy."
       }
     ],
     "processTitle": "Jak wygląda współpraca",
     "steps": [
       {
         "title": "Konsultacja",
-        "text": "Pierwsza wizyta (60 min): konsultacja, plan terapii i zalecenia dla rodzica."
+        "text": "Pierwsza wizyta (do 60 min): diagnoza, wywiad z rodzicem, ułożenie indywidualnego planu terapii oraz przekazanie zaleceń do pracy w domu."
       },
       {
         "title": "Terapia",
-        "text": "Kolejne wizyty trwają 30 lub 45 minut."
+        "text": "Kolejne wizyty trwają 45 min lub 30 min."
       }
     ]
   },

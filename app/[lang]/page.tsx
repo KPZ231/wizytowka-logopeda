@@ -65,7 +65,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd }}
       />
-      <Hero title={dict.home.title} lead={dict.home.lead} />
+      <Hero title={dict.home.title} role={dict.home.role} lead={dict.home.lead} />
       <MedfileSection medfile={dict.medfile} />
       <ServicesSection services={dict.services} />
       <PricingSection pricing={dict.pricing} medfile={dict.medfile} />

@@ -11,9 +11,9 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 // Po przekroczeniu tego progu (px) użytkownik „opuścił” hero → pasek się pokazuje.
 const SHOW_AFTER = 48;
-
+//
 // Kotwice na stronie głównej (z prefiksem języka, działają też z podstron); blog to przyszła osobna podstrona (teraz 404).
-const links = [
+const links = [       
   ["services", "#uslugi"],
   ["about", "#gabinet"],
   ["pricing", "#cennik"],

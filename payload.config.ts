@@ -16,6 +16,10 @@ export default buildConfig({
   collections: [Users, Media, Gallery, Posts],
   editor: lexicalEditor(),
   db: postgresAdapter({
+    // Bez push: dev nie zmienia schematu bazy. Zostawiał znacznik „dev” w payload_migrations,
+    // przez który `payload migrate` w buildzie czekał na interaktywne y/N (~5 min na Vercelu).
+    // Zmiany schematu: `npm run payload migrate:create`, migrację commitujemy.
+    push: false,
     pool: {
       connectionString: process.env.DATABASE_URI ?? "",
     },

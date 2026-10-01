@@ -33,6 +33,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  // Własny 404 dla adresów spoza [lang] (np. /plik.txt); korzeń aplikacji nie ma wspólnego layoutu
+  experimental: { globalNotFound: true },
   headers: async () => [{ source: "/:path*", headers: securityHeaders }],
   images: {
     remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],

@@ -114,6 +114,7 @@ export function ContactSection({
             <MapEmbed
               lang={lang}
               query={`${ADDRESS}, Polska`}
+              externalHref={MAP_HREF}
               text={contact.mapEmbed}
             />
           </Item>

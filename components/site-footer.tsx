@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { Locale } from "@/i18n/config";
 import { BUSINESS } from "@/lib/site";
+import { CookieSettingsButton } from "./cookie-banner";
 import { dayNames } from "./contact-section";
 import { BackToTop, FooterLanguages, Wordmark } from "./footer-client";
 import { Item, Stagger } from "./reveal";
@@ -141,9 +142,7 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
               </Link>
             </li>
             <li>
-              <Link href={`/${lang}/cookies`} className={link}>
-                {footer.cookies}
-              </Link>
+              <CookieSettingsButton label={footer.cookies} className={link} />
             </li>
           </ul>
           <div className="flex items-center justify-between gap-4 md:justify-end">

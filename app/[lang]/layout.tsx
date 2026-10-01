@@ -7,6 +7,8 @@ import { BUSINESS, CREATOR, IS_INDEXABLE, OG_LOCALE, SITE_URL } from "@/lib/site
 import { getDictionary } from "./dictionaries";
 import { MotionProvider } from "./motion-provider";
 import { ChatLauncher } from "../../components/chat-launcher";
+import { CookieBanner } from "../../components/cookie-banner";
+import { ErrorTextProvider } from "../../components/error-screen";
 import { SmoothScroll } from "../../components/smooth-scroll";
 import { SiteFooter } from "../../components/site-footer";
 import { SiteNav } from "../../components/site-nav";
@@ -70,9 +72,12 @@ export default async function RootLayout({
         <MotionProvider>
           <SmoothScroll />
           <SiteNav lang={lang} nav={nav} />
-          {children}
+          <ErrorTextProvider lang={lang} text={dict.errors}>
+            {children}
+          </ErrorTextProvider>
           <SiteFooter lang={lang} dict={dict} />
           <ChatLauncher lang={lang} text={dict.chat} />
+          <CookieBanner lang={lang} text={dict.cookies} />
         </MotionProvider>
         <Analytics />
       </body>

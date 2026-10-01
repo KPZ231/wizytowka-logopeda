@@ -24,5 +24,6 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   // pomija _next, pliki statyczne (z kropką), API i panel Payload
-  matcher: ["/((?!_next|api|admin|.*\..*).*)"],
+  // `\\.` — w zwykłym stringu pojedynczy `\.` zamieniał się w `.` i wykluczał każdą ścieżkę
+  matcher: ["/((?!_next|api|admin|.*\\..*).*)"],
 };

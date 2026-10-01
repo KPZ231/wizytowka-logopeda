@@ -77,9 +77,6 @@
       "phone": "Telefon",
       "email": "E-mail",
       "contactHint": "Podaj telefon lub e-mail, żebyśmy mogli odpowiedzieć.",
-      "who": "Dla kogo jest wizyta?",
-      "child": "Dziecko",
-      "adult": "Dorosły",
       "message": "Wiadomość",
       "messageHint": "Nie podawaj szczegółów diagnozy ani danych wrażliwych.",
       "consent": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na wiadomość.",
@@ -97,7 +94,11 @@
       }
     },
     "mapEmbed": {
-      "iframeTitle": "Mapa Google: Gabinet Logopedyczny Kinga Krajs, Biernota 11, Czerwionka"
+      "iframeTitle": "Mapa Google: Gabinet Logopedyczny Kinga Krajs, Biernota 11, Czerwionka",
+      "consentText": "Mapa Google ładuje się po zgodzie na pliki cookies zewnętrznego dostawcy.",
+      "show": "Pokaż mapę",
+      "openExternal": "Otwórz w Google Maps",
+      "newTab": "(otwiera się w nowej karcie)"
     }
   },
   "faq": {
@@ -172,7 +173,7 @@
     "rights": "Wszelkie prawa zastrzeżone.",
     "credit": "Created by",
     "privacy": "Polityka prywatności",
-    "cookies": "Polityka cookies",
+    "cookies": "Ustawienia cookies",
     "backToTop": "Wróć na górę strony",
     "languages": "Język strony"
   },
@@ -275,5 +276,35 @@
     "pause": "Wstrzymaj przewijanie opinii",
     "newTab": "(otwiera się w nowej karcie)",
     "countLabel": "opinii w Google"
+  },
+  "cookies": {
+    "label": "Zgoda na pliki cookies",
+    "title": "Mapa Google a prywatność",
+    "body": "Strona działa bez śledzenia. Mapa kontaktowa pochodzi od Google i może zapisać pliki cookies — wczytamy ją tylko za Twoją zgodą.",
+    "accept": "Akceptuję",
+    "reject": "Odrzucam",
+    "policy": "Polityka prywatności",
+    "settings": "Ustawienia cookies"
+  },
+  "errors": {
+    "notFound": {
+      "title": "Nie znaleźliśmy tej strony",
+      "body": "Adres mógł się zmienić albo zawiera literówkę. Wróć na stronę główną lub zadzwoń — chętnie pomożemy."
+    },
+    "serverError": {
+      "title": "Coś poszło nie tak po naszej stronie",
+      "body": "Spróbuj odświeżyć stronę za chwilę. Jeśli problem wróci, zadzwoń do gabinetu — umówimy wizytę telefonicznie.",
+      "retry": "Spróbuj ponownie",
+      "reference": "Kod zgłoszenia"
+    },
+    "home": "Wróć na stronę główną",
+    "call": "Zadzwoń: 518 542 193",
+    "languages": "Wybierz język strony"
+  },
+  "easter": {
+    "title": "Ciii… to sekretna strona",
+    "body": "Tę witrynę zrobiło KPZsProductions. Jeż przechodził akurat obok.",
+    "alt": "Jeż, który tupie przez ekran",
+    "back": "Wróć na stronę główną"
   }
 }

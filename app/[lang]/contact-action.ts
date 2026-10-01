@@ -7,7 +7,6 @@ export type ContactValues = {
   name: string;
   phone: string;
   email: string;
-  who: string;
   message: string;
   consent: boolean;
 };
@@ -23,7 +22,6 @@ const EMPTY: ContactValues = {
   name: "",
   phone: "",
   email: "",
-  who: "child",
   message: "",
   consent: false,
 };
@@ -66,7 +64,6 @@ export async function sendContact(
     name: text(data, "name", 100),
     phone: text(data, "phone", 30),
     email: text(data, "email", 120),
-    who: data.get("who") === "adult" ? "adult" : "child",
     message: text(data, "message", 1000),
     consent: data.get("consent") === "on",
   };
@@ -114,7 +111,6 @@ export async function sendContact(
         `Imię i nazwisko: ${values.name}`,
         `Telefon: ${values.phone || "—"}`,
         `E-mail: ${values.email || "—"}`,
-        `Wizyta dla: ${values.who === "adult" ? "dorosłego" : "dziecka"}`,
         "",
         values.message,
       ].join("\n"),

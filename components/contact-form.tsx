@@ -22,7 +22,6 @@ const initial: ContactState = {
     name: "",
     phone: "",
     email: "",
-    who: "child",
     message: "",
     consent: false,
   },
@@ -60,7 +59,7 @@ function ErrorText({ id, children }: { id: string; children: ReactNode }) {
   );
 }
 
-/** Formularz z walidacją po stronie serwera (Server Action), animowanym błędem, przełącznikiem „dla kogo” i ekranem sukcesu. */
+/** Formularz z walidacją po stronie serwera (Server Action), animowanym błędem, ekranem sukcesu. */
 export function ContactForm({ form }: { form: Dictionary["contact"]["form"] }) {
   // Zmiana key odmontowuje formularz i zeruje stan useActionState („napisz kolejną wiadomość”).
   const [resetKey, setResetKey] = useState(0);
@@ -81,7 +80,6 @@ function FormBody({
   onReset: () => void;
 }) {
   const [state, action, pending] = useActionState(sendContact, initial);
-  const [who, setWho] = useState(state.values.who);
   const [length, setLength] = useState(state.values.message.length);
   const err = (f: ContactField) => state.errors.includes(f);
 
@@ -211,45 +209,6 @@ function FormBody({
               <ErrorText id="cf-contact-err">{form.errors.contact}</ErrorText>
             )}
           </div>
-
-          <fieldset>
-            <legend className="mb-2 text-sm font-semibold text-foreground">
-              {form.who}
-            </legend>
-            <div className="relative grid grid-cols-2 gap-1 rounded-full bg-surface p-1 ring-1 ring-border-strong">
-              {(["child", "adult"] as const).map((v) => (
-                <label
-                  key={v}
-                  className="relative flex min-h-11 cursor-pointer items-center justify-center rounded-full text-sm font-semibold has-focus-visible:outline-3 has-focus-visible:outline-(--focus-ring)"
-                >
-                  <input
-                    type="radio"
-                    name="who"
-                    value={v}
-                    checked={who === v}
-                    onChange={() => setWho(v)}
-                    className="sr-only"
-                  />
-                  {who === v && (
-                    <motion.span
-                      layoutId="who-pill"
-                      className="absolute inset-0 rounded-full bg-accent shadow-sm"
-                      transition={{
-                        type: "spring",
-                        duration: 0.35,
-                        bounce: 0.1,
-                      }}
-                    />
-                  )}
-                  <span
-                    className={`relative transition-colors duration-200 ${who === v ? "text-on-strong" : "text-muted"}`}
-                  >
-                    {form[v]}
-                  </span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
 
           <div>
             <label

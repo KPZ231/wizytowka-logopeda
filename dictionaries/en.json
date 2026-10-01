@@ -77,9 +77,6 @@
       "phone": "Phone",
       "email": "Email",
       "contactHint": "Enter a phone number or an email so we can reply.",
-      "who": "Who is the visit for?",
-      "child": "Child",
-      "adult": "Adult",
       "message": "Message",
       "messageHint": "Please do not include diagnosis details or sensitive data.",
       "consent": "I consent to the processing of my personal data for the purpose of replying to this message.",
@@ -97,7 +94,11 @@
       }
     },
     "mapEmbed": {
-      "iframeTitle": "Google map: Kinga Krajs Speech Therapy Practice, Biernota 11, Czerwionka"
+      "iframeTitle": "Google map: Kinga Krajs Speech Therapy Practice, Biernota 11, Czerwionka",
+      "consentText": "The Google map loads after you accept cookies from this third-party provider.",
+      "show": "Show map",
+      "openExternal": "Open in Google Maps",
+      "newTab": "(opens in a new tab)"
     }
   },
   "faq": {
@@ -172,7 +173,7 @@
     "rights": "All rights reserved.",
     "credit": "Created by",
     "privacy": "Privacy policy",
-    "cookies": "Cookie policy",
+    "cookies": "Cookie settings",
     "backToTop": "Back to top",
     "languages": "Site language"
   },
@@ -275,5 +276,35 @@
     "pause": "Pause scrolling reviews",
     "newTab": "(opens in a new tab)",
     "countLabel": "reviews on Google"
+  },
+  "cookies": {
+    "label": "Cookie consent",
+    "title": "Google Maps and your privacy",
+    "body": "This site runs without tracking. The contact map comes from Google and may set cookies — we load it only with your consent.",
+    "accept": "Accept",
+    "reject": "Decline",
+    "policy": "Privacy policy",
+    "settings": "Cookie settings"
+  },
+  "errors": {
+    "notFound": {
+      "title": "We couldn't find this page",
+      "body": "The address may have changed or contain a typo. Go back to the home page or give us a call — we're happy to help."
+    },
+    "serverError": {
+      "title": "Something went wrong on our side",
+      "body": "Please try refreshing the page in a moment. If it keeps happening, call the practice and we'll book your visit by phone.",
+      "retry": "Try again",
+      "reference": "Report code"
+    },
+    "home": "Back to the home page",
+    "call": "Call: 518 542 193",
+    "languages": "Choose site language"
+  },
+  "easter": {
+    "title": "Shh… this is a secret page",
+    "body": "This website was made by KPZsProductions. A hedgehog was just passing by.",
+    "alt": "A hedgehog stomping across the screen",
+    "back": "Back to the home page"
   }
 }

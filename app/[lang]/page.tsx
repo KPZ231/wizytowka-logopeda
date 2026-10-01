@@ -75,7 +75,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         dict={dict.reviews}
         lang={lang}
       />
-      <OfficeSection office={dict.office} />
+      <OfficeSection office={dict.office} lang={lang} />
       <RouteSection route={dict.route} />
       <FaqSection faq={dict.faq} />
       <ContactSection contact={dict.contact} lang={lang} />

@@ -54,28 +54,6 @@
   },
   "office": {
     "title": "Take a look inside",
-    "photos": [
-      {
-        "caption": "The practice",
-        "alt": "The practice"
-      },
-      {
-        "caption": "Interior",
-        "alt": "Interior"
-      },
-      {
-        "caption": "Therapy space",
-        "alt": "Therapy space"
-      },
-      {
-        "caption": "Details",
-        "alt": "Details"
-      },
-      {
-        "caption": "Atmosphere",
-        "alt": "Atmosphere"
-      }
-    ],
     "zoom": "Zoom in on photo",
     "close": "Close",
     "prev": "Previous photo",

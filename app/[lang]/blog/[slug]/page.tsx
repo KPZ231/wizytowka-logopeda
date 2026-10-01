@@ -157,7 +157,7 @@ export default async function PostPage({
             </aside>
             <div className="lg:col-start-1 lg:row-start-1">
               <div id="post-article">
-                <PostBody blocks={post.content} />
+                <PostBody content={post.content} />
               </div>
               <div className="mt-14 flex max-w-3xl flex-col gap-8">
                 <AuthorCard blog={blog} />

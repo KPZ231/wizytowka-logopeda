@@ -54,28 +54,6 @@
   },
   "office": {
     "title": "Zajrzyj do gabinetu",
-    "photos": [
-      {
-        "caption": "Gabinet",
-        "alt": "Gabinet"
-      },
-      {
-        "caption": "Wnętrze",
-        "alt": "Wnętrze"
-      },
-      {
-        "caption": "Miejsce terapii",
-        "alt": "Miejsce terapii"
-      },
-      {
-        "caption": "Detale",
-        "alt": "Detale"
-      },
-      {
-        "caption": "Atmosfera",
-        "alt": "Atmosfera"
-      }
-    ],
     "zoom": "Przybliż zdjęcie",
     "close": "Zamknij",
     "prev": "Poprzednie zdjęcie",

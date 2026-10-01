@@ -4,6 +4,7 @@ import { AnimatePresence, motion, type Variants } from "motion/react";
 import { SpinImage } from "@/components/spin-image";
 import { useEffect, useState, useSyncExternalStore, type CSSProperties } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import type { GalleryPhoto } from "@/lib/gallery";
 import { Item, Stagger } from "./reveal";
 
 type Spot = { x: number; y: number; w: number; rot: number };
@@ -37,14 +38,6 @@ const DESKTOP: Layout = {
   ],
 };
 
-
-const SRC: (string | undefined)[] = [
-  "/gallery_images/619b8200-dc15-4a67-8556-a21ff0d6a802.jpeg",
-  "/gallery_images/20261001_114332.jpg",
-  "/gallery_images/20261001_114414.jpg",
-  "/gallery_images/20261001_114445.jpg",
-  "/gallery_images/816230139_122258956052265057_3154695948022504229_n.jpg",
-];
 
 const FILL = 0.72; // miejsce pod zdjęciem na przyciski
 const TARGET_Y = 45; // środek kadru w % wysokości tablicy (nieco wyżej, nad przyciskami)
@@ -86,11 +79,17 @@ const pill =
  * Tablica korkowa: klik w zdjęcie przesuwa i przybliża „kamerę” (cały świat tablicy)
  * do wybranego zdjęcia. Pozycje w % — zoom nie wymaga mierzenia DOM.
  */
-export function OfficeBoard({ office }: { office: Dictionary["office"] }) {
+export function OfficeBoard({
+  office,
+  photos,
+}: {
+  office: Dictionary["office"];
+  photos: GalleryPhoto[];
+}) {
   const desktop = useIsDesktop();
   const [active, setActive] = useState<number | null>(null);
   const layout = desktop ? DESKTOP : MOBILE;
-  const count = office.photos.length;
+  const count = photos.length;
 
   useEffect(() => {
     if (active === null) return;
@@ -140,7 +139,7 @@ export function OfficeBoard({ office }: { office: Dictionary["office"] }) {
         transition={SPRING}
         onClick={() => setActive(null)}
       >
-        {office.photos.map((photo, i) => {
+        {photos.map((photo, i) => {
           const m = MOBILE.spots[i];
           const d = DESKTOP.spots[i];
           const spotVars = {
@@ -154,7 +153,7 @@ export function OfficeBoard({ office }: { office: Dictionary["office"] }) {
           const dimmed = active !== null && active !== i;
           return (
             <div
-              key={photo.caption}
+              key={photo.src}
               style={spotVars}
               className="absolute top-(--y) left-(--x) w-(--w) -translate-x-1/2 md:top-(--yd) md:left-(--xd) md:w-(--wd)"
             >
@@ -179,15 +178,13 @@ export function OfficeBoard({ office }: { office: Dictionary["office"] }) {
                       className="absolute -top-1.5 left-1/2 z-10 size-3 -translate-x-1/2 rounded-full md:-top-2 bg-[radial-gradient(circle_at_35%_30%,var(--violet-300),var(--violet-600)_60%,var(--violet-800))] shadow-sm md:size-4"
                     />
                     <span className="relative block aspect-[4/3] overflow-hidden bg-accent-soft">
-                      {SRC[i] && (
-                        <SpinImage
-                          src={SRC[i]}
-                          alt={photo.alt}
-                          fill
-                          sizes="(min-width:768px) 20vw, 40vw"
-                          className="object-cover"
-                        />
-                      )}
+                      <SpinImage
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="(min-width:768px) 20vw, 40vw"
+                        className="object-cover"
+                      />
                     </span>
                   </button>
                 </motion.div>
@@ -224,7 +221,7 @@ export function OfficeBoard({ office }: { office: Dictionary["office"] }) {
         )}
       </AnimatePresence>
       <p className="sr-only" aria-live="polite">
-        {active !== null ? office.photos[active].caption : ""}
+        {active !== null ? photos[active].caption : ""}
       </p>
     </Stagger>
   );

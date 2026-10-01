@@ -23,6 +23,6 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // pomija _next, pliki statyczne (z kropką) i API
-  matcher: ["/((?!_next|api|.*\..*).*)"],
+  // pomija _next, pliki statyczne (z kropką), API i panel Payload
+  matcher: ["/((?!_next|api|admin|.*\..*).*)"],
 };

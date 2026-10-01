@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { notFound } from "next/navigation";
 import { Manrope } from "next/font/google";
 import { hasLocale, locales } from "@/i18n/config";
@@ -71,6 +72,7 @@ export default async function RootLayout({
           {children}
           <SiteFooter lang={lang} dict={dict} />
         </MotionProvider>
+        <Analytics />
       </body>
     </html>
   );

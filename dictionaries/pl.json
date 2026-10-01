@@ -176,6 +176,13 @@
     "backToTop": "Wróć na górę strony",
     "languages": "Język strony"
   },
+  "chat": {
+    "open": "Otwórz czat",
+    "close": "Zamknij",
+    "title": "Czat na stronie",
+    "notice": "Rozmowę obsługuje zewnętrzna usługa Tidio (serwery w UE). Nie podawaj w czacie danych o zdrowiu dziecka — omówimy je podczas wizyty w gabinecie.",
+    "start": "Rozpocznij czat"
+  },
   "blog": {
     "meta": {
       "title": "Blog logopedyczny | Kinga Krajs, Czerwionka",

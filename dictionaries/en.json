@@ -176,6 +176,13 @@
     "backToTop": "Back to top",
     "languages": "Site language"
   },
+  "chat": {
+    "open": "Open chat",
+    "close": "Close",
+    "title": "Chat with us",
+    "notice": "Chat is handled by a third-party service, Tidio (servers in the EU). Please don't share your child's health details here — we'll discuss those during the appointment.",
+    "start": "Start chat"
+  },
   "blog": {
     "meta": {
       "title": "Speech therapy blog | Kinga Krajs, Czerwionka",

@@ -79,7 +79,7 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             </address>
             <a
               href={PHONE_HREF}
-              className={`${link} mt-1 text-lg font-semibold tabular-nums text-on-strong`}
+              className={`${link} !block mt-3 text-lg font-semibold tabular-nums text-on-strong`}
             >
               {PHONE_DISPLAY}
             </a>
@@ -87,7 +87,7 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
               href={MEDFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className={link}
+              className={`${link} !block mt-2`}
             >
               {footer.medfile}
               <span className="sr-only">{footer.newTab}</span>

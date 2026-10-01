@@ -6,6 +6,7 @@ import { hasLocale, locales } from "@/i18n/config";
 import { BUSINESS, CREATOR, IS_INDEXABLE, OG_LOCALE, SITE_URL } from "@/lib/site";
 import { getDictionary } from "./dictionaries";
 import { MotionProvider } from "./motion-provider";
+import { ChatLauncher } from "../../components/chat-launcher";
 import { SmoothScroll } from "../../components/smooth-scroll";
 import { SiteFooter } from "../../components/site-footer";
 import { SiteNav } from "../../components/site-nav";
@@ -71,6 +72,7 @@ export default async function RootLayout({
           <SiteNav lang={lang} nav={nav} />
           {children}
           <SiteFooter lang={lang} dict={dict} />
+          <ChatLauncher lang={lang} text={dict.chat} />
         </MotionProvider>
         <Analytics />
       </body>

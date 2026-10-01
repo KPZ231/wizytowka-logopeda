@@ -5,15 +5,16 @@ const isDev = process.env.NODE_ENV === "development";
 
 // Statyczna CSP (bez nonce), żeby strony zostały SSG. 'unsafe-inline' wymagany przez inline skrypty
 // hydratacji Next; 'unsafe-eval' tylko w dev (React debug). frame-src: mapa Google w map-embed.
+// Tidio (components/chat-launcher.tsx): skrypt ładuje się dopiero po zgodzie użytkownika w panelu czatu.
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com${isDev ? " 'unsafe-eval'" : ""}`,
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://*.public.blob.vercel-storage.com",
-  "font-src 'self'",
-  "frame-src https://www.google.com",
+  `script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://code.tidio.co${isDev ? " 'unsafe-eval'" : ""}`,
+  "style-src 'self' 'unsafe-inline' https://code.tidio.co",
+  "img-src 'self' data: blob: https://*.public.blob.vercel-storage.com https://*.tidio.co https://*.tidiochat.com",
+  "font-src 'self' https://code.tidio.co",
+  "frame-src https://www.google.com https://*.tidio.co",
   // /_vercel/insights/* jest proxowane przez Vercel pod tą samą domeną co strona.
-  "connect-src 'self' https://va.vercel-scripts.com",
+  "connect-src 'self' https://va.vercel-scripts.com https://*.tidio.co https://*.tidiochat.com wss://*.tidio.co",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",

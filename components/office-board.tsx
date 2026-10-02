@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, type Variants } from "motion/react";
 import { SpinImage } from "@/components/spin-image";
-import { useEffect, useState, useSyncExternalStore, type CSSProperties } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import type { GalleryPhoto } from "@/lib/gallery";
 import { Item, Stagger } from "./reveal";
@@ -88,8 +88,17 @@ export function OfficeBoard({
 }) {
   const desktop = useIsDesktop();
   const [active, setActive] = useState<number | null>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
   const layout = desktop ? DESKTOP : MOBILE;
   const count = photos.length;
+
+  // Zoom liczy się względem tablicy, nie okna — gdy tablica jest częściowo poza ekranem,
+  // widać tylko pół zdjęcia. Centrujemy tablicę w oknie przy każdym przybliżeniu.
+  useEffect(() => {
+    if (active === null) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    wrapRef.current?.scrollIntoView({ block: "center", behavior: reduce ? "auto" : "smooth" });
+  }, [active]);
 
   useEffect(() => {
     if (active === null) return;
@@ -132,6 +141,7 @@ export function OfficeBoard({
   );
 
   return (
+    <div ref={wrapRef}>
     <Stagger className="cork relative aspect-[3/4] overflow-hidden rounded-lg border border-border-strong md:aspect-[16/10]">
       <motion.div
         className="cork absolute inset-0"
@@ -224,6 +234,7 @@ export function OfficeBoard({
         {active !== null ? photos[active].caption : ""}
       </p>
     </Stagger>
+    </div>
   );
 }
 

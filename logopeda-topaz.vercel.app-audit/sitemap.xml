@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://logopeda-topaz.vercel.app/pl</loc>
+<xhtml:link rel="alternate" hreflang="pl" href="https://logopeda-topaz.vercel.app/pl" />
+<xhtml:link rel="alternate" hreflang="en" href="https://logopeda-topaz.vercel.app/en" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://logopeda-topaz.vercel.app/uk" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://logopeda-topaz.vercel.app/pl" />
+</url>
+<url>
+<loc>https://logopeda-topaz.vercel.app/pl/blog</loc>
+<xhtml:link rel="alternate" hreflang="pl" href="https://logopeda-topaz.vercel.app/pl/blog" />
+<xhtml:link rel="alternate" hreflang="en" href="https://logopeda-topaz.vercel.app/en/blog" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://logopeda-topaz.vercel.app/uk/blog" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://logopeda-topaz.vercel.app/pl/blog" />
+</url>
+<url>
+<loc>https://logopeda-topaz.vercel.app/en</loc>
+<xhtml:link rel="alternate" hreflang="pl" href="https://logopeda-topaz.vercel.app/pl" />
+<xhtml:link rel="alternate" hreflang="en" href="https://logopeda-topaz.vercel.app/en" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://logopeda-topaz.vercel.app/uk" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://logopeda-topaz.vercel.app/pl" />
+</url>
+<url>
+<loc>https://logopeda-topaz.vercel.app/en/blog</loc>
+<xhtml:link rel="alternate" hreflang="pl" href="https://logopeda-topaz.vercel.app/pl/blog" />
+<xhtml:link rel="alternate" hreflang="en" href="https://logopeda-topaz.vercel.app/en/blog" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://logopeda-topaz.vercel.app/uk/blog" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://logopeda-topaz.vercel.app/pl/blog" />
+</url>
+<url>
+<loc>https://logopeda-topaz.vercel.app/uk</loc>
+<xhtml:link rel="alternate" hreflang="pl" href="https://logopeda-topaz.vercel.app/pl" />
+<xhtml:link rel="alternate" hreflang="en" href="https://logopeda-topaz.vercel.app/en" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://logopeda-topaz.vercel.app/uk" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://logopeda-topaz.vercel.app/pl" />
+</url>
+<url>
+<loc>https://logopeda-topaz.vercel.app/uk/blog</loc>
+<xhtml:link rel="alternate" hreflang="pl" href="https://logopeda-topaz.vercel.app/pl/blog" />
+<xhtml:link rel="alternate" hreflang="en" href="https://logopeda-topaz.vercel.app/en/blog" />
+<xhtml:link rel="alternate" hreflang="uk" href="https://logopeda-topaz.vercel.app/uk/blog" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://logopeda-topaz.vercel.app/pl/blog" />
+</url>
+</urlset>

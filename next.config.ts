@@ -4,7 +4,7 @@ import { withPayload } from "@payloadcms/next/withPayload";
 const isDev = process.env.NODE_ENV === "development";
 
 // Statyczna CSP (bez nonce), żeby strony zostały SSG. 'unsafe-inline' wymagany przez inline skrypty
-// hydratacji Next; 'unsafe-eval' tylko w dev (React debug). frame-src: mapa Google w map-embed.
+// hydratacji Next (dane RSC; SRI ich nie hashuje — CSP bez unsafe-inline blokuje hydratację, sprawdzone buildem); 'unsafe-eval' tylko w dev (React debug). frame-src: mapa Google w map-embed.
 // Tidio (components/chat-launcher.tsx): skrypt ładuje się dopiero po zgodzie użytkownika w panelu czatu.
 const csp = [
   "default-src 'self'",
@@ -33,6 +33,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  // nie zdradzamy stosu (Next.js, Payload) w nagłówku odpowiedzi
+  poweredByHeader: false,
   // Własny 404 dla adresów spoza [lang] (np. /plik.txt); korzeń aplikacji nie ma wspólnego layoutu
   experimental: { globalNotFound: true },
   headers: async () => [{ source: "/:path*", headers: securityHeaders }],

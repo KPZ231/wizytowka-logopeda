@@ -142,7 +142,6 @@ export function Hero({
           >
             <img
               src="/hero/Clip_Center.webp"
-              fetchPriority="high"
               alt=""
               width={640}
               height={650}

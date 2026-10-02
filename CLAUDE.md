@@ -40,6 +40,8 @@ Wielostronnicowa wizytówka (Next.js 16.3.8, App Router, React 19.2, TypeScript 
   - Terapia logopedyczna (kolejna wizyta) — 80 zł / 30 min
   - Terapia logopedyczna (kolejna wizyta) — 120 zł / 45 min
 - Zakres: zespół Aspergera, zaburzenia połykania, zaburzenia mowy, ćwiczenia mowy, autyzm
+- Treści ze słowników (od klienta, traktować jako źródło prawdy): dzieci od 2. roku życia; terapia miofunkcjonalna i ortodontyczna, afazja, opóźniony rozwój mowy; wykształcenie (mgr edukacja wczesnoszkolna i przedszkolna, podyplomowe z logopedii, w trakcie podyplomowe z autyzmu). Nie trafiają do JSON-LD.
+- Zajęcia tylko w gabinecie (bez dojazdu do domu); `areaServed` = Czerwionka-Leszczyny. Meta description odpowiada treści strony — Asperger/połykanie wrócą do opisu dopiero z własnymi sekcjami.
 
 Nie wymyślaj opinii, dyplomów, liczby pacjentów ani innych faktów, których nie ma powyżej. Brakujące dane zgłoś użytkownikowi.
 

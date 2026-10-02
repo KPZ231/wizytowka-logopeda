@@ -24,6 +24,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@type": ["MedicalBusiness", "LocalBusiness"],
+    "@id": `${SITE_URL}/#business`,
     name: BUSINESS.name,
     url: `${SITE_URL}/${lang}`,
     telephone: BUSINESS.telephone,
@@ -31,6 +32,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     image: `${SITE_URL}${LOGO_PATH}`,
     medicalSpecialty: "SpeechPathology",
     inLanguage: lang,
+    knowsLanguage: "pl",
+    // zajęcia tylko w gabinecie (decyzja właściciela projektu) — obszar = miejscowość gabinetu
+    areaServed: { "@type": "City", name: "Czerwionka-Leszczyny" },
     priceRange: "80–150 PLN",
     currenciesAccepted: "PLN",
     address: {
@@ -40,6 +44,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       addressLocality: BUSINESS.city,
       addressCountry: BUSINESS.country,
     },
+    geo: { "@type": "GeoCoordinates", ...BUSINESS.geo },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Tuesday", "Thursday"],
@@ -50,12 +55,12 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       "@type": "Offer",
       priceCurrency: "PLN",
       price: parseInt(item.price, 10),
-      itemOffered: { "@type": "Service", name: item.name },
+      itemOffered: { "@type": "Service", name: `${item.name} (${item.duration})` },
     })),
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
       `${BUSINESS.street}, ${BUSINESS.postalCode} ${BUSINESS.city}, Polska`,
     )}`,
-    sameAs: [BUSINESS.medfile],
+    sameAs: [BUSINESS.medfile, summary.profileUrl],
   }).replace(/</g, "\\u003c");
 
   return (

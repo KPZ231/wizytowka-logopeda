@@ -1,0 +1,164 @@
+{
+  "updatedLabel": "Ostatnia aktualizacja",
+  "binding": "W razie rozbieżności między wersjami językowymi wiążąca jest wersja polska.",
+  "privacy": {
+    "meta": {
+      "title": "Polityka prywatności | Gabinet Logopedyczny Kinga Krajs",
+      "description": "Jak gabinet logopedyczny Kinga Krajs przetwarza dane osobowe zbierane przez stronę: formularz kontaktowy, czat, mapa i statystyki. Twoje prawa i kontakt."
+    },
+    "title": "Polityka prywatności",
+    "updated": "2026-10-02",
+    "sections": [
+      {
+        "heading": "1. Administrator danych",
+        "body": [
+          "Administratorem danych osobowych przetwarzanych za pośrednictwem tej strony jest Kinga Krajs, prowadząca Gabinet Logopedyczny Kinga Krajs, Biernota 11, 44-230 Czerwionka (Polska), telefon: +48 518 542 193.",
+          "Działalność prowadzona jest jako jednoosobowa działalność gospodarcza pod firmą LOGOPEDA KINGA KRAJS, NIP: 6423255638, REGON: 529511490. W sprawach ochrony danych osobowych napisz na adres: kingakrajslogopeda@gmail.com."
+        ]
+      },
+      {
+        "heading": "2. Zakres tej polityki",
+        "body": [
+          "Polityka dotyczy wyłącznie strony internetowej: formularza kontaktowego, czatu, mapy i danych technicznych. Dane przetwarzane w trakcie wizyt w gabinecie (w tym dokumentacja dotycząca terapii) są opisane w odrębnej informacji, którą otrzymasz w gabinecie."
+        ]
+      },
+      {
+        "heading": "3. Formularz kontaktowy",
+        "body": [
+          "Jeśli wyślesz wiadomość przez formularz, otrzymamy Twoje imię i nazwisko, numer telefonu lub adres e-mail (co najmniej jedno z nich) oraz treść wiadomości. Wykorzystamy je wyłącznie po to, by odpowiedzieć na wiadomość i ustalić ewentualny termin wizyty.",
+          "Podstawą przetwarzania jest Twoja zgoda, którą zaznaczasz przed wysłaniem (art. 6 ust. 1 lit. a RODO), a także nasz uzasadniony interes w obsłudze zapytań (art. 6 ust. 1 lit. f RODO).",
+          "Prosimy, by w formularzu nie podawać szczegółów dotyczących zdrowia — wystarczy imię, kontakt i krótkie pytanie. Szczegóły omówimy podczas rozmowy lub wizyty.",
+          "Wiadomości przechowujemy: 6 miesięcy od ostatniego kontaktu."
+        ]
+      },
+      {
+        "heading": "4. Kontakt telefoniczny",
+        "body": [
+          "Jeśli zadzwonisz pod numer podany na stronie, użyjemy Twojego numeru telefonu i podanych informacji tylko do rozmowy i umówienia wizyty. Połączeń nie nagrywamy za pośrednictwem tej strony."
+        ]
+      },
+      {
+        "heading": "5. Czat na stronie",
+        "body": [
+          "Czat obsługuje firma Tidio. Skrypt czatu ładuje się dopiero wtedy, gdy klikniesz „Rozpocznij czat” — wcześniej nie jest pobierany i nie przekazuje żadnych danych. Po uruchomieniu czatu dostawca przetwarza treść rozmowy oraz dane techniczne urządzenia we własnym zakresie, według swojej polityki prywatności. Podstawą jest Twoje działanie podjęte z własnej woli (art. 6 ust. 1 lit. a RODO).",
+          "Nie wpisuj w czacie szczegółów dotyczących zdrowia."
+        ],
+        "links": [{ "label": "Polityka prywatności Tidio", "href": "https://www.tidio.com/privacy-policy/" }]
+      },
+      {
+        "heading": "6. Mapa Google",
+        "body": [
+          "Mapa w sekcji kontaktu pochodzi od Google. Wczytujemy ją dopiero po Twojej zgodzie na pliki cookies zewnętrznego dostawcy. Po wczytaniu Google może otrzymać Twój adres IP i dane o przeglądarce oraz zapisać własne pliki cookies. Bez zgody mapa się nie ładuje — możesz skorzystać z linku do mapy w nowej karcie."
+        ],
+        "links": [{ "label": "Polityka prywatności Google", "href": "https://policies.google.com/privacy" }]
+      },
+      {
+        "heading": "7. Hosting i statystyki",
+        "body": [
+          "Stronę udostępnia Vercel Inc. Serwer zapisuje techniczne logi (adres IP, czas i adres żądanej strony, dane o przeglądarce) w celu zapewnienia bezpieczeństwa i działania strony (art. 6 ust. 1 lit. f RODO).",
+          "Korzystamy z Vercel Analytics do zbiorczych statystyk odwiedzin. Narzędzie nie używa plików cookies i nie buduje profili użytkowników."
+        ],
+        "links": [{ "label": "Polityka prywatności Vercel", "href": "https://vercel.com/legal/privacy-policy" }]
+      },
+      {
+        "heading": "8. Odbiorcy danych",
+        "body": [
+          "Dane mogą być powierzone lub udostępnione dostawcom usług, z których korzysta strona:"
+        ],
+        "list": [
+          "Vercel Inc. — hosting i statystyki,",
+          "Resend — dostarczanie wiadomości z formularza na skrzynkę gabinetu,",
+          "Tidio — czat (po jego uruchomieniu),",
+          "Google — mapa (po Twojej zgodzie)."
+        ]
+      },
+      {
+        "heading": "9. Przekazywanie danych poza EOG",
+        "body": [
+          "Niektórzy z wymienionych dostawców mają siedzibę w Stanach Zjednoczonych lub przetwarzają dane poza Europejskim Obszarem Gospodarczym. Przekazanie odbywa się na podstawie mechanizmów przewidzianych w RODO, w szczególności Programu Ochrony Danych UE–USA (EU–US Data Privacy Framework) lub standardowych klauzul umownych — zgodnie z dokumentacją danego dostawcy."
+        ]
+      },
+      {
+        "heading": "10. Twoje prawa",
+        "body": ["Masz prawo do:"],
+        "list": [
+          "dostępu do danych i otrzymania ich kopii,",
+          "sprostowania danych,",
+          "usunięcia danych,",
+          "ograniczenia przetwarzania,",
+          "przenoszenia danych,",
+          "sprzeciwu wobec przetwarzania opartego na uzasadnionym interesie,",
+          "cofnięcia zgody w dowolnym momencie (bez wpływu na zgodność z prawem przetwarzania przed cofnięciem),",
+          "wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa)."
+        ]
+      },
+      {
+        "heading": "11. Dobrowolność i profilowanie",
+        "body": [
+          "Podanie danych w formularzu jest dobrowolne, ale niezbędne, byśmy mogli odpowiedzieć. Nie podejmujemy wobec Ciebie decyzji w sposób zautomatyzowany i nie stosujemy profilowania."
+        ]
+      },
+      {
+        "heading": "12. Zmiany polityki",
+        "body": [
+          "Politykę możemy aktualizować, gdy zmieni się sposób działania strony lub przepisy. Aktualna wersja i data zmiany są zawsze widoczne na tej stronie. Informacje o plikach cookies znajdziesz w Polityce cookies."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "meta": {
+      "title": "Polityka cookies | Gabinet Logopedyczny Kinga Krajs",
+      "description": "Z jakich plików cookies i pamięci przeglądarki korzysta strona gabinetu logopedycznego Kinga Krajs oraz jak zmienić swoją zgodę."
+    },
+    "title": "Polityka cookies",
+    "updated": "2026-10-02",
+    "sections": [
+      {
+        "heading": "1. Czym są pliki cookies",
+        "body": [
+          "Cookies to małe pliki zapisywane w przeglądarce przez odwiedzaną stronę. Podobne zadanie pełni pamięć przeglądarki (localStorage). W tej polityce piszemy o obu rozwiązaniach łącznie jako o „plikach cookies”."
+        ]
+      },
+      {
+        "heading": "2. Co robimy domyślnie",
+        "body": [
+          "Strona działa bez śledzenia i bez reklam. Przed Twoją decyzją nie ładujemy zewnętrznych skryptów, które zapisują pliki cookies. Statystyki odwiedzin (Vercel Analytics) nie używają plików cookies."
+        ]
+      },
+      {
+        "heading": "3. Własne, niezbędne",
+        "body": ["Zapisujemy tylko to, co potrzebne do działania strony:"],
+        "list": [
+          "consent-v1 (localStorage) — zapamiętuje Twoją decyzję o zgodzie na zewnętrzne cookies, aby baner nie wracał przy każdej wizycie. Zostaje do czasu, aż ją zmienisz lub wyczyścisz dane strony,",
+          "payload-token — ciasteczko sesji logowania do panelu administracyjnego bloga; ustawiane wyłącznie osobie, która loguje się do panelu. Odwiedzający stronę go nie otrzymują."
+        ]
+      },
+      {
+        "heading": "4. Zewnętrzne — tylko za Twoją zgodą lub akcją",
+        "body": ["Poniższe usługi mogą zapisać własne pliki cookies, gdy ich użyjesz:"],
+        "list": [
+          "Mapa Google — ładuje się po kliknięciu „Akceptuję” w banerze lub „Pokaż mapę” pod mapą. Google może zapisać pliki cookies i odczytać adres IP. Bez zgody pokazujemy tylko link do mapy,",
+          "Czat Tidio — ładuje się dopiero po kliknięciu „Rozpocznij czat”. Dostawca może zapisać pliki cookies potrzebne do działania i zapamiętania rozmowy."
+        ],
+        "links": [
+          { "label": "Polityka prywatności Google", "href": "https://policies.google.com/privacy" },
+          { "label": "Polityka prywatności Tidio", "href": "https://www.tidio.com/privacy-policy/" }
+        ]
+      },
+      {
+        "heading": "5. Jak zmienić decyzję",
+        "body": [
+          "Kliknij „Ustawienia cookies” w stopce strony — baner pojawi się ponownie i możesz wybrać inaczej. Zgodę na Tidio wyrażasz każdorazowo przez uruchomienie czatu.",
+          "Pliki cookies możesz też usunąć lub zablokować w ustawieniach przeglądarki. Zablokowanie może sprawić, że mapa lub czat nie zadziałają."
+        ]
+      },
+      {
+        "heading": "6. Kontakt i dane osobowe",
+        "body": [
+          "Zasady przetwarzania danych osobowych oraz dane administratora opisuje Polityka prywatności. Pytania możesz zadać telefonicznie: +48 518 542 193."
+        ]
+      }
+    ]
+  }
+}

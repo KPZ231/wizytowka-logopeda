@@ -60,7 +60,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
       `${BUSINESS.street}, ${BUSINESS.postalCode} ${BUSINESS.city}, Polska`,
     )}`,
-    sameAs: [BUSINESS.medfile, summary.profileUrl],
+    sameAs: [BUSINESS.medfile, BUSINESS.facebook, summary.profileUrl],
   }).replace(/</g, "\\u003c");
 
   return (

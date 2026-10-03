@@ -169,11 +169,13 @@
     "navTitle": "Strona",
     "contactTitle": "Kontakt",
     "medfile": "Profil gabinetu na Medfile",
+    "facebook": "Gabinet na Facebooku",
     "newTab": "(otwiera się w nowej karcie)",
     "rights": "Wszelkie prawa zastrzeżone.",
     "credit": "Created by",
     "privacy": "Polityka prywatności",
     "cookies": "Ustawienia cookies",
+    "cookiePolicy": "Polityka cookies",
     "backToTop": "Wróć na górę strony",
     "languages": "Język strony"
   },
@@ -283,7 +285,7 @@
     "body": "Strona działa bez śledzenia. Mapa kontaktowa pochodzi od Google i może zapisać pliki cookies — wczytamy ją tylko za Twoją zgodą.",
     "accept": "Akceptuję",
     "reject": "Odrzucam",
-    "policy": "Polityka prywatności",
+    "policy": "Polityka cookies",
     "settings": "Ustawienia cookies"
   },
   "errors": {

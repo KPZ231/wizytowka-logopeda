@@ -39,7 +39,7 @@ export function CookieBanner({
           <p className="mt-2 text-sm text-muted">
             {text.body}{" "}
             <Link
-              href={`/${lang}/polityka-prywatnosci`}
+              href={`/${lang}/polityka-cookies`}
               className="font-semibold text-accent underline underline-offset-4 hover:text-accent-hover"
             >
               {text.policy}

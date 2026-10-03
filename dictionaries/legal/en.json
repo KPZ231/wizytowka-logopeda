@@ -1,0 +1,162 @@
+{
+  "updatedLabel": "Last updated",
+  "binding": "In case of any discrepancy between language versions, the Polish version prevails.",
+  "privacy": {
+    "meta": {
+      "title": "Privacy policy | Gabinet Logopedyczny Kinga Krajs",
+      "description": "How the Kinga Krajs speech therapy practice processes personal data collected by this website: contact form, chat, map and statistics. Your rights and contact."
+    },
+    "title": "Privacy policy",
+    "updated": "2026-10-02",
+    "sections": [
+      {
+        "heading": "1. Data controller",
+        "body": [
+          "The controller of personal data processed through this website is Kinga Krajs, who runs Gabinet Logopedyczny Kinga Krajs, Biernota 11, 44-230 Czerwionka (Poland), phone: +48 518 542 193.",
+          "The business is run as a sole proprietorship under the name LOGOPEDA KINGA KRAJS, NIP (tax ID): 6423255638, REGON: 529511490. For data protection matters, write to: kingakrajslogopeda@gmail.com."
+        ]
+      },
+      {
+        "heading": "2. Scope of this policy",
+        "body": [
+          "This policy covers the website only: the contact form, chat, map and technical data. Data processed during visits to the practice (including therapy records) is described in a separate notice you will receive at the practice."
+        ]
+      },
+      {
+        "heading": "3. Contact form",
+        "body": [
+          "If you send a message through the form, we receive your name, a phone number or e-mail address (at least one of them) and the message itself. We use them only to reply and to arrange a visit if needed.",
+          "The legal basis is your consent, which you tick before sending (Art. 6(1)(a) GDPR), and our legitimate interest in handling enquiries (Art. 6(1)(f) GDPR).",
+          "Please do not include health details in the form — your name, contact and a short question are enough. We will discuss details by phone or during a visit.",
+          "We keep messages for: 6 months from the last contact."
+        ]
+      },
+      {
+        "heading": "4. Phone contact",
+        "body": [
+          "If you call the number shown on the website, we use your phone number and the information you give only to talk with you and arrange a visit. Calls are not recorded through this website."
+        ]
+      },
+      {
+        "heading": "5. Website chat",
+        "body": [
+          "The chat is provided by Tidio. The chat script loads only after you click “Start chat” — before that it is not downloaded and sends no data. Once started, the provider processes the conversation and technical device data on its own terms, under its privacy policy. The basis is your voluntary action (Art. 6(1)(a) GDPR).",
+          "Please do not enter health details in the chat."
+        ],
+        "links": [{ "label": "Tidio privacy policy", "href": "https://www.tidio.com/privacy-policy/" }]
+      },
+      {
+        "heading": "6. Google Maps",
+        "body": [
+          "The map in the contact section comes from Google. We load it only after you consent to third-party cookies. Once loaded, Google may receive your IP address and browser data and set its own cookies. Without consent the map does not load — you can use the link to open the map in a new tab."
+        ],
+        "links": [{ "label": "Google privacy policy", "href": "https://policies.google.com/privacy" }]
+      },
+      {
+        "heading": "7. Hosting and statistics",
+        "body": [
+          "The website is hosted by Vercel Inc. The server records technical logs (IP address, time and address of the requested page, browser data) to keep the site secure and working (Art. 6(1)(f) GDPR).",
+          "We use Vercel Analytics for aggregated visit statistics. It does not use cookies and does not build user profiles."
+        ],
+        "links": [{ "label": "Vercel privacy policy", "href": "https://vercel.com/legal/privacy-policy" }]
+      },
+      {
+        "heading": "8. Recipients of data",
+        "body": ["Data may be entrusted or disclosed to the service providers the website uses:"],
+        "list": [
+          "Vercel Inc. — hosting and statistics,",
+          "Resend — delivering form messages to the practice's mailbox,",
+          "Tidio — chat (after you start it),",
+          "Google — map (after your consent)."
+        ]
+      },
+      {
+        "heading": "9. Transfers outside the EEA",
+        "body": [
+          "Some of these providers are based in the United States or process data outside the European Economic Area. Transfers rely on GDPR mechanisms, in particular the EU–US Data Privacy Framework or standard contractual clauses — as documented by each provider."
+        ]
+      },
+      {
+        "heading": "10. Your rights",
+        "body": ["You have the right to:"],
+        "list": [
+          "access your data and obtain a copy,",
+          "rectify your data,",
+          "erase your data,",
+          "restrict processing,",
+          "data portability,",
+          "object to processing based on legitimate interest,",
+          "withdraw consent at any time (without affecting the lawfulness of processing before withdrawal),",
+          "lodge a complaint with the President of the Personal Data Protection Office (UODO), ul. Stawki 2, 00-193 Warsaw, Poland."
+        ]
+      },
+      {
+        "heading": "11. Voluntary data and profiling",
+        "body": [
+          "Providing data in the form is voluntary but necessary for us to reply. We do not make automated decisions about you and do not use profiling."
+        ]
+      },
+      {
+        "heading": "12. Changes to this policy",
+        "body": [
+          "We may update this policy when the website or the law changes. The current version and its date are always shown on this page. Information about cookies is in the Cookie policy."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "meta": {
+      "title": "Cookie policy | Gabinet Logopedyczny Kinga Krajs",
+      "description": "Which cookies and browser storage the Kinga Krajs speech therapy website uses, and how to change your consent."
+    },
+    "title": "Cookie policy",
+    "updated": "2026-10-02",
+    "sections": [
+      {
+        "heading": "1. What cookies are",
+        "body": [
+          "Cookies are small files a website saves in your browser. Browser storage (localStorage) does a similar job. In this policy we refer to both together as “cookies”."
+        ]
+      },
+      {
+        "heading": "2. What we do by default",
+        "body": [
+          "The website runs without tracking and without ads. Before you decide, we do not load third-party scripts that set cookies. Visit statistics (Vercel Analytics) do not use cookies."
+        ]
+      },
+      {
+        "heading": "3. Our own, essential",
+        "body": ["We store only what the site needs to work:"],
+        "list": [
+          "consent-v1 (localStorage) — remembers your decision about third-party cookies so the banner does not return on every visit. It stays until you change it or clear the site data,",
+          "payload-token — a login session cookie for the blog's admin panel; set only for the person who logs in to the panel. Website visitors do not receive it."
+        ]
+      },
+      {
+        "heading": "4. Third-party — only with your consent or action",
+        "body": ["These services may set their own cookies when you use them:"],
+        "list": [
+          "Google Maps — loads after you click “Accept” in the banner or “Show map” under the map. Google may set cookies and read your IP address. Without consent we show only a link to the map,",
+          "Tidio chat — loads only after you click “Start chat”. The provider may set cookies needed for the chat to work and to remember the conversation."
+        ],
+        "links": [
+          { "label": "Google privacy policy", "href": "https://policies.google.com/privacy" },
+          { "label": "Tidio privacy policy", "href": "https://www.tidio.com/privacy-policy/" }
+        ]
+      },
+      {
+        "heading": "5. How to change your decision",
+        "body": [
+          "Click “Cookie settings” in the site footer — the banner will reappear and you can choose differently. Consent for Tidio is given each time by starting the chat.",
+          "You can also delete or block cookies in your browser settings. Blocking may stop the map or chat from working."
+        ]
+      },
+      {
+        "heading": "6. Contact and personal data",
+        "body": [
+          "The rules on processing personal data and the controller's details are in the Privacy policy. You can ask questions by phone: +48 518 542 193."
+        ]
+      }
+    ]
+  }
+}

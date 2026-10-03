@@ -24,6 +24,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: posts[0]?.updatedAt ?? posts[0]?.publishedAt,
         alternates: { languages: languages("/blog") },
       },
+      ...["/polityka-prywatnosci", "/polityka-cookies"].map((path) => ({
+        url: `${SITE_URL}/${l}${path}`,
+        lastModified: buildDate,
+        alternates: { languages: languages(path) },
+      })),
       ...posts.map((p) => ({
         url: `${SITE_URL}/${l}/blog/${p.slug}`,
         lastModified: p.updatedAt ?? p.publishedAt,

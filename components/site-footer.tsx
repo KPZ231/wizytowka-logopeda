@@ -14,6 +14,8 @@ const ADDRESS = ["Biernota 11", "44-230 Czerwionka"];
 const PHONE_DISPLAY = "+48 518 542 193";
 const PHONE_HREF = "tel:+48518542193";
 const MEDFILE_URL = BUSINESS.medfile;
+// Dane rejestrowe JDG (od klientki); skróty NIP/REGON są takie same w każdym języku.
+const LEGAL_ID = "LOGOPEDA KINGA KRAJS · NIP 6423255638 · REGON 529511490";
 const OPEN_DAYS = [1, 3] as const;
 const CREDIT_URL = "https://www.kpzsproductions.pl";
 
@@ -93,6 +95,30 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
               {footer.medfile}
               <span className="sr-only">{footer.newTab}</span>
             </a>
+            <a
+              href={BUSINESS.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${link} mt-2 size-11 justify-center rounded-full border border-violet-800 hover:border-violet-200`}
+            >
+              {/* lucide-react 1.x nie ma ikon marek — ścieżka starej ikony Facebook z lucide */}
+              <svg
+                aria-hidden="true"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+              <span className="sr-only">
+                {footer.facebook} {footer.newTab}
+              </span>
+            </a>
           </Item>
 
           <Item>
@@ -122,6 +148,7 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             <p>
               © {new Date().getFullYear()} {NAME}. {footer.rights}
             </p>
+            <p className="tabular-nums">{LEGAL_ID}</p>
             <p>
               {footer.credit}{" "}
               <a
@@ -139,6 +166,11 @@ export function SiteFooter({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             <li>
               <Link href={`/${lang}/polityka-prywatnosci`} className={link}>
                 {footer.privacy}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lang}/polityka-cookies`} className={link}>
+                {footer.cookiePolicy}
               </Link>
             </li>
             <li>

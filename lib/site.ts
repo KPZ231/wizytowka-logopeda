@@ -26,6 +26,7 @@ export const BUSINESS = {
   city: "Czerwionka",
   country: "PL",
   medfile: "https://www.medfile.pl/kinga-krajs/logopeda/polska/",
+  facebook: "https://www.facebook.com/profile.php?id=61557951712919",
   // Współrzędne budynku Biernota 11 z OpenStreetMap (geokodowanie adresu klienta, numer domu zgodny).
   geo: { latitude: 50.1757418, longitude: 18.6965083 },
 } as const;

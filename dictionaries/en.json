@@ -169,11 +169,13 @@
     "navTitle": "Site",
     "contactTitle": "Contact",
     "medfile": "Practice profile on Medfile",
+    "facebook": "Practice on Facebook",
     "newTab": "(opens in a new tab)",
     "rights": "All rights reserved.",
     "credit": "Created by",
     "privacy": "Privacy policy",
     "cookies": "Cookie settings",
+    "cookiePolicy": "Cookie policy",
     "backToTop": "Back to top",
     "languages": "Site language"
   },
@@ -283,7 +285,7 @@
     "body": "This site runs without tracking. The contact map comes from Google and may set cookies — we load it only with your consent.",
     "accept": "Accept",
     "reject": "Decline",
-    "policy": "Privacy policy",
+    "policy": "Cookie policy",
     "settings": "Cookie settings"
   },
   "errors": {

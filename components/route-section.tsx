@@ -1,6 +1,7 @@
-import { MapPinned, Play } from "lucide-react";
+import { MapPinned } from "lucide-react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { RouteSteps } from "./route-steps";
+import { RouteVideo } from "./route-video";
 import { Item, Stagger } from "./reveal";
 
 // Dane klienta (NAP). Link bez API: Google Maps Directions URL.
@@ -8,7 +9,6 @@ const DIRECTIONS_HREF = `https://www.google.com/maps/dir/?api=1&destination=${en
 
 /**
  * Poradnik dojazdu: film przyklejony po lewej, po prawej „trasa” — pionowa linia z krokami i zdjęciami.
- * ponytail: film to placeholder; gdy będzie plik, podmienić blok na <video controls poster=… preload="none">.
  */
 export function RouteSection({ route }: { route: Dictionary["route"] }) {
   return (
@@ -45,32 +45,7 @@ export function RouteSection({ route }: { route: Dictionary["route"] }) {
 
         <div className="mt-12 grid gap-10 lg:mt-16 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
           <Item className="lg:sticky lg:top-28 lg:self-start">
-            <div
-              role="img"
-              aria-label={`${route.videoLabel}. ${route.videoSoon}`}
-              className="relative flex aspect-video flex-col items-center justify-center gap-4 overflow-hidden rounded-lg bg-surface-strong text-on-strong shadow-lg"
-            >
-              <span
-                aria-hidden="true"
-                className="absolute -top-1/3 -right-1/4 size-3/4 rounded-full bg-violet-600/40 blur-3xl"
-              />
-              <span
-                aria-hidden="true"
-                className="relative flex size-20 items-center justify-center rounded-full bg-background text-accent shadow-md"
-              >
-                <Play
-                  className="ml-1 size-8"
-                  strokeWidth={1.75}
-                  fill="currentColor"
-                />
-              </span>
-              <p className="relative px-6 text-center font-semibold">
-                {route.videoLabel}
-              </p>
-              <p className="relative px-6 text-center text-sm text-violet-200">
-                {route.videoSoon}
-              </p>
-            </div>
+            <RouteVideo label={route.videoLabel} />
           </Item>
 
           <RouteSteps

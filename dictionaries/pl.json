@@ -149,18 +149,18 @@
     "steps": [
       {
         "title": "Dojazd",
-        "text": "[UZUPEŁNIJ] Opisz, jak dojechać do gabinetu: z której strony, które drogi, punkty orientacyjne.",
-        "alt": "Dojazd do gabinetu"
+        "text": "Gabinet mieści się przy ul. Biernota 11. Szukaj zielonej bramy z tabliczką „11” — za nią widać budynek gabinetu.",
+        "alt": "Brama z numerem 11 i budynek gabinetu"
       },
       {
         "title": "Gdzie zaparkować",
-        "text": "[UZUPEŁNIJ] Opisz, gdzie zostawić samochód: miejsce parkingowe, ewentualne ograniczenia.",
-        "alt": "Miejsce parkingowe przy gabinecie"
+        "text": "Samochód zostaw na żwirowym placu przy gabinecie, w miejscu zaznaczonym na zdjęciu. Jest tam miejsce na kilka aut.",
+        "alt": "Żwirowy plac, na którym można parkować"
       },
       {
-        "title": "Od parkingu do gabinetu",
-        "text": "[UZUPEŁNIJ] Opisz ostatni odcinek: którędy iść, jak rozpoznać wejście.",
-        "alt": "Wejście do gabinetu"
+        "title": "Parkowanie przed bramą",
+        "text": "Możesz też zostawić auto przed bramą, przy ogrodzeniu, tak jak na zdjęciu.",
+        "alt": "Auto zaparkowane przed bramą przy ogrodzeniu"
       }
     ]
   },

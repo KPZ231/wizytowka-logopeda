@@ -5,6 +5,8 @@ import { locales } from "@/i18n/config";
 import { CATEGORIES } from "@/lib/blog/types";
 
 const revalidatePost = (slug?: string) => {
+  // sitemap jest generowana przy buildzie — bez tego nowy wpis trafia do niej dopiero po wdrożeniu
+  revalidatePath("/sitemap.xml");
   for (const locale of locales) {
     revalidatePath(`/${locale}/blog`);
     if (slug) revalidatePath(`/${locale}/blog/${slug}`);

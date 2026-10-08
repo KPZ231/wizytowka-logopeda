@@ -37,8 +37,21 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Własny 404 dla adresów spoza [lang] (np. /plik.txt); korzeń aplikacji nie ma wspólnego layoutu
   experimental: { globalNotFound: true },
-  headers: async () => [{ source: "/:path*", headers: securityHeaders }],
+  headers: async () => [
+    { source: "/:path*", headers: securityHeaders },
+    // film i zdjęcia dojazdu: długi cache; przy podmianie pliku zmień jego nazwę
+    {
+      source: "/dojazd/:path*",
+      headers: [
+        {
+          key: "Cache-Control",
+          value: "public, max-age=2592000, stale-while-revalidate=86400",
+        },
+      ],
+    },
+  ],
   images: {
+    minimumCacheTTL: 2592000,
     remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
   },
 };

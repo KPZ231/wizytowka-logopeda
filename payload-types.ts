@@ -157,7 +157,6 @@ export interface Media {
    * Tekst alternatywny obrazu (dostępność, SEO).
    */
   alt: string;
-  _objectKey?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -185,7 +184,6 @@ export interface Gallery {
    * Kolejność na tablicy (rosnąco).
    */
   order: number;
-  _objectKey?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -350,7 +348,6 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
-  _objectKey?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -371,7 +368,6 @@ export interface GallerySelect<T extends boolean = true> {
   alt?: T;
   caption?: T;
   order?: T;
-  _objectKey?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;

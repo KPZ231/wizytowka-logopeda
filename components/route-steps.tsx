@@ -15,8 +15,12 @@ type Step = { title: string; text: string; alt: string };
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
-// ponytail: gdy klient dośle zdjęcia, wpisać ścieżki z public/dojazd/ (brak = placeholder).
-const PHOTOS: (string | undefined)[] = [undefined, undefined, undefined];
+// Kolejność = kroki ze słownika: brama z gabinetem, parking (plac), parkowanie przed bramą. Brak ścieżki = placeholder.
+const PHOTOS: (string | undefined)[] = [
+  "/dojazd/2.webp",
+  "/dojazd/1.webp",
+  "/dojazd/3.webp",
+];
 
 /**
  * Pionowa „trasa”: linia wypełnia się fioletem wraz ze scrollem (scaleY), a krok, który jest

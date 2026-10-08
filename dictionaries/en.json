@@ -149,18 +149,18 @@
     "steps": [
       {
         "title": "Getting here",
-        "text": "[TO BE COMPLETED] Describe how to reach the practice: which direction, which roads, landmarks.",
-        "alt": "Route to the practice"
+        "text": "The practice is at 11 Biernota Street. Look for the green gate with the “11” sign — the practice building is visible behind it.",
+        "alt": "Gate number 11 and the practice building"
       },
       {
         "title": "Where to park",
-        "text": "[TO BE COMPLETED] Describe where to leave the car: parking spot, any restrictions.",
-        "alt": "Parking near the practice"
+        "text": "Leave your car on the gravel yard by the practice, in the spot marked in the photo. There is room for several cars.",
+        "alt": "Gravel yard where you can park"
       },
       {
-        "title": "From the car park to the practice",
-        "text": "[TO BE COMPLETED] Describe the last stretch: which way to walk, how to recognise the entrance.",
-        "alt": "Entrance to the practice"
+        "title": "Parking in front of the gate",
+        "text": "You can also leave your car in front of the gate, by the fence, as in the photo.",
+        "alt": "Car parked in front of the gate by the fence"
       }
     ]
   },
